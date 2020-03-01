@@ -9,9 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.Explode;
 import android.transition.Fade;
-import android.transition.Slide;
 import android.transition.Transition;
-import android.view.Gravity;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
@@ -27,48 +25,19 @@ public class Opciones extends AppCompatActivity {
     @SuppressWarnings("unchecked")
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private void iniciarActividad(){
-        transitio.setDuration(DURATION_TRANSITION);
-        transitio.setInterpolator(new DecelerateInterpolator());
-        getWindow().setExitTransition(transitio);
-        Intent inte=new Intent(Opciones.this, Visual.class);
-        startActivity(inte, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
-
-    }
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    private void iniciarActividad2(){
-        transitio.setDuration(DURATION_TRANSITION);
-        transitio.setInterpolator(new DecelerateInterpolator());
-        getWindow().setExitTransition(transitio);
-        Intent inte=new Intent(Opciones.this, Auditivo.class);
-        startActivity(inte, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
-
-    }
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void iniciarActividad3(){
         transitio.setDuration(DURATION_TRANSITION);
         transitio.setInterpolator(new DecelerateInterpolator());
         getWindow().setExitTransition(transitio);
-        Intent inte=new Intent(Opciones.this, Comunicativo.class);
+        Intent inte=new Intent(Opciones.this, Transicion_Dinosaurio.class);
         startActivity(inte, ActivityOptionsCompat.makeSceneTransitionAnimation(this).toBundle());
+    }
 
-    }
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void card1(View view) {
-        transitio=new Fade(Fade.OUT);
-        iniciarActividad();//visual
-    }
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-    public void card2(View view) {
-        transitio=new Fade(Fade.OUT);
-        iniciarActividad2();//audi
-    }
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void card3(View view) {
         transitio=new Explode();
         iniciarActividad3();//comunicativo
+        //CARD 2 y CARD 1 eliminada, solo existe versión comunicativa
     }
 }

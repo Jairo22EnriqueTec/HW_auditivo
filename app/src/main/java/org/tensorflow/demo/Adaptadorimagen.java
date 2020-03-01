@@ -16,9 +16,9 @@ import java.util.List;
  */
 
 public class Adaptadorimagen extends RecyclerView.Adapter<Adaptadorimagen.ImagenHolder> implements View.OnClickListener{
-    List<Recyclerimg>listaimagen;
+    List<Adaptador_Recyclerimg>listaimagen;
     private View.OnClickListener listener2;
-    public Adaptadorimagen(List<Recyclerimg>listaimagen){
+    public Adaptadorimagen(List<Adaptador_Recyclerimg>listaimagen){
         this.listaimagen=listaimagen;
     }
     @Override

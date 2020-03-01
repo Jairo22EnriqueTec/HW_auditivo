@@ -1,14 +1,10 @@
 package org.tensorflow.demo;
 
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -39,8 +35,8 @@ private ImageView linear;
 linear=itemView.findViewById(R.id.image);
         }
     }
-    public List<Reciclers>listadieta;
-    public AdaptadorRecycker(List<Reciclers>listadieta){
+    public List<Apatador_Reciclers>listadieta;
+    public AdaptadorRecycker(List<Apatador_Reciclers>listadieta){
         this.listadieta=listadieta;
 
     }

@@ -20,7 +20,7 @@ public class Bienvenida extends AppCompatActivity {
         btn_entendido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),tutorial_primer_uso.class));
+                startActivity(new Intent(getApplicationContext(), Tutorial_primer_uso.class));
             }
         });
     }

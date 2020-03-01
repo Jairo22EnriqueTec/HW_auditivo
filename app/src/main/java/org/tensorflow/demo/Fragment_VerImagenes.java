@@ -35,8 +35,8 @@ public class Fragment_VerImagenes extends Fragment {
     JsonObjectRequest jsonObjectRequest, jsonObjectRequest2;
     RequestQueue requestQueue,requestQueue2;
     RecyclerView recyclerimagen;
-    ArrayList<Recyclerm> listaestados;
-    ArrayList<Recyclerimg>listaimagenes;
+    ArrayList<Adaptador_Recyclerm> listaestados;
+    ArrayList<Adaptador_Recyclerimg>listaimagenes;
     String nombre;
     ProgressDialog progressDialog;
     public Fragment_VerImagenes() */{
@@ -74,12 +74,12 @@ public class Fragment_VerImagenes extends Fragment {
         jsonObjectRequest2=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                Recyclerm rec = null;
-                Recyclerimg recyclerimg=null;
+                Adaptador_Recyclerm rec = null;
+                Adaptador_Recyclerimg recyclerimg=null;
                 JSONArray jsonArray = response.optJSONArray("Contenido");
                 try{
                     for (int i = 0; i < jsonArray.length(); i++) {
-                        recyclerimg=new Recyclerimg();
+                        recyclerimg=new Adaptador_Recyclerimg();
                         JSONObject jsonObject = null;
                         jsonObject=jsonArray.getJSONObject(i);
                         recyclerimg.setNombre(jsonObject.optString("Nombre"));
@@ -106,11 +106,11 @@ public class Fragment_VerImagenes extends Fragment {
 /*jsonObjectRequest2=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
     @Override
     public void onResponse(JSONObject response) {
-        Recyclerm rec = null;
+        Adaptador_Recyclerm rec = null;
         JSONArray jsonArray = response.optJSONArray("Contenido");
         try{
         for (int i = 0; i < jsonArray.length();i++) {
-            rec=new Recyclerm();
+            rec=new Adaptador_Recyclerm();
             JSONObject jsonObject = null;
 jsonObject=jsonArray.getJSONObject(i);
 rec.setNombre(jsonObject.optString("Nombre"));

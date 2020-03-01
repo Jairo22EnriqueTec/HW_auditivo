@@ -39,7 +39,7 @@ ImageButton imageButton;
 RecyclerView recyclerView;
     RequestQueue requestQueue;
     JsonObjectRequest jsonObjectRequest;
-    ArrayList<Recyclerm>listaestado;
+    ArrayList<Adaptador_Recyclerm>listaestado;
     ProgressDialog progressDialog;
     EditText texto;
     ImageButton botonsubir;
@@ -114,11 +114,11 @@ progressDialog.hide();
                 progressDialog=new ProgressDialog(getActivity());
 progressDialog.setMessage("Cargando");
 progressDialog.show();
-                Recyclerm rec = null;
+                Adaptador_Recyclerm rec = null;
                 JSONArray jsonArray=response.optJSONArray("Estados");
                 try{
                   for (int i=0;i<jsonArray.length();i++){
-                      rec=new Recyclerm();
+                      rec=new Adaptador_Recyclerm();
                       JSONObject jsonObject=null;
                       jsonObject=jsonArray.getJSONObject(i);
                       rec.setNombre(jsonObject.optString("Nombre"));

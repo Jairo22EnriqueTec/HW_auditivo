@@ -1,7 +1,6 @@
 package org.tensorflow.tensorflowdemo;
 
 import android.Manifest;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -28,7 +27,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.SearchView;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -39,12 +37,10 @@ import org.tensorflow.demo.Clases.Elemen;
 import org.tensorflow.demo.Clases.VariablesYDatos;
 import org.tensorflow.demo.Classes;
 import org.tensorflow.demo.Datos_Usuario;
-import org.tensorflow.demo.Main2Activity;
+import org.tensorflow.demo.Teclado_senas_voz;
 import org.tensorflow.demo.R;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -127,7 +123,7 @@ public class Audio_Texto extends Fragment {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), Main2Activity.class);
+                Intent intent=new Intent(getActivity(), Teclado_senas_voz.class);
                 startActivity(intent);
             }
         });
@@ -149,8 +145,8 @@ public class Audio_Texto extends Fragment {
             @Override
             public void onClick(View v) {
                 Palabra=lista_palabras.get(recyclerView_palabras.getChildAdapterPosition(v)).getTexto();
-//VentanaSenas.llenarRecycler();
-                //Toast.makeText(Main2Activity.this, ""+tema, Toast.LENGTH_SHORT).show();
+//Ventana_Teclado_Voz_Senas.llenarRecycler();
+                //Toast.makeText(Teclado_senas_voz.this, ""+tema, Toast.LENGTH_SHORT).show();
                 Decir_y_Mostrar(Palabra);
             }
         });

@@ -44,8 +44,8 @@ public class Fragment_Comunicativo_Estados extends Fragment {
     RequestQueue requestQueue, requestQueue2;
     ProgressDialog progressDialog;
     String nombre;
-    ArrayList<Recyclerimg> listaimagenes;
-    ArrayList<Recyclerm> listaestados;
+    ArrayList<Adaptador_Recyclerimg> listaimagenes;
+    ArrayList<Adaptador_Recyclerm> listaestados;
 
     public Fragment_Comunicativo_Estados() {
         // Required empty public constructor
@@ -56,7 +56,7 @@ public class Fragment_Comunicativo_Estados extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fragment__comunicativo3, container, false);
+        View view= inflater.inflate(R.layout.fragment_estados, container, false);
         enviarestado = view.findViewById(R.id.subir_estado);
         recyclerView = view.findViewById(R.id.bdrecyclerview);
         floatingActionButton = view.findViewById(R.id.agalerias);
@@ -104,11 +104,11 @@ public class Fragment_Comunicativo_Estados extends Fragment {
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                Recyclerimg recyclerimg=null;
+                Adaptador_Recyclerimg recyclerimg=null;
                 JSONArray json=response.optJSONArray("Contenido");
                 try{
                     for (int i=0;i<json.length();i++){
-                        recyclerimg=new Recyclerimg();
+                        recyclerimg=new Adaptador_Recyclerimg();
                         JSONObject jsonObject=null;
                         jsonObject=json.getJSONObject(i);
                         recyclerimg.setNombre(jsonObject.optString("Nombre"));

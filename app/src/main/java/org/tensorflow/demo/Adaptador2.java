@@ -34,8 +34,8 @@ public class Adaptador2 extends RecyclerView.Adapter<Adaptador2.ViewHolder>imple
 
         }
     }
-    public List<Reciclers2> listadieta2;
-    public Adaptador2(List<Reciclers2> listadieta2){
+    public List<Adaptador_Reciclers2> listadieta2;
+    public Adaptador2(List<Adaptador_Reciclers2> listadieta2){
         this.listadieta2=listadieta2;
 
     }

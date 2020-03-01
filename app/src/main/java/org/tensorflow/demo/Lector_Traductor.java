@@ -65,7 +65,7 @@ public class Lector_Traductor extends AppCompatActivity {
         try{
             TextRecognizer textRecognizer = new TextRecognizer.Builder(getApplicationContext()).build();
             if (!textRecognizer.isOperational()) {
-                Log.w("MainActivity", "Detector dependencies are not yet available");
+                Log.w("Formulario_Datos", "Detector dependencies are not yet available");
             } else {
                 try{
                     cameraSource = new CameraSource.Builder(getApplicationContext(), textRecognizer)

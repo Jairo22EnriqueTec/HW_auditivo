@@ -1,6 +1,5 @@
 package org.tensorflow.demo;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,19 +7,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import org.tensorflow.demo.SQLite.Puntuacion;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import org.tensorflow.demo.SQLite.Puntaje;
 
 public class Resultados_Duolingo extends AppCompatActivity {
 
@@ -44,10 +37,10 @@ public class Resultados_Duolingo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 insertar();
-                Ventana_cursos_ejer.aciertos=0;
-                Ventana_Cursos_Ejer2.aciertos2=0;
+                Ventana_Cursos_Ejer_Selec_Txt.aciertos=0;
+                Ventana_Cursos_Ejer_Selec_Sena.aciertos2=0;
                 //finish();
-                startActivity(new Intent(getApplicationContext(),Menu_Cursos.class));
+                startActivity(new Intent(getApplicationContext(), Menu_Quiz.class));
             }
         });
         setAciertos();
@@ -56,7 +49,7 @@ public class Resultados_Duolingo extends AppCompatActivity {
     }
 
     private void insertar() {
-        switch (Menu_Cursos.ventana){
+        switch (Menu_Quiz.ventana){
             case "1":
                 Puntaje puntuacion=new Puntaje(this,"Puntaje",null,2);
                 SQLiteDatabase sqLiteDatabase=puntuacion.getWritableDatabase();
@@ -110,7 +103,7 @@ public class Resultados_Duolingo extends AppCompatActivity {
     }
     Cursor cursor;
     private void setAciertos(){
-        aciertos=Ventana_Cursos_Ejer2.aciertos2;
+        aciertos= Ventana_Cursos_Ejer_Selec_Sena.aciertos2;
     }
     private void Settear(){
         /*double rs=aciertos/total;

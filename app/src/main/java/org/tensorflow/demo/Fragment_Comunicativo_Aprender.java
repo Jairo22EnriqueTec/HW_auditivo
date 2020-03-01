@@ -47,7 +47,7 @@ CardView cardView, cardView2;
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent inte=new Intent(getActivity(),Menu_Cursos.class);
+                Intent inte=new Intent(getActivity(), Menu_Quiz.class);
                 getActivity().startActivity(inte);
             }
         });

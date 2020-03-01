@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.tensorflow.demo.Introduccion.Tutorial_primer_uso;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,7 +23,7 @@ import android.widget.Toast;
 public class Fragment_Comunicativo_DatosApp extends Fragment {
 
     TextView telJairo,telMigue,correoApp,correoMigue,correoJairo;
-    Button btnCerrarSesion;
+    Button btnCerrarSesion,btnvertutorial;
     public Fragment_Comunicativo_DatosApp() {
         // Required empty public constructor
     }
@@ -31,7 +33,15 @@ public class Fragment_Comunicativo_DatosApp extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_fragment__comunicativo4, container, false);
+        View view=inflater.inflate(R.layout.fragment_datosapp, container, false);
+        btnvertutorial=view.findViewById(R.id.btnvertutorial);
+        btnvertutorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), Tutorial_primer_uso.class));
+            }
+        });
+
 
         btnCerrarSesion = view.findViewById(R.id.btnCerrarsesion);
         btnCerrarSesion.setOnClickListener(new View.OnClickListener() {

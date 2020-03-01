@@ -1,32 +1,25 @@
 package org.tensorflow.demo;
 
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Created by jj on 26/07/18.
  */
 
 public class Adaptador_mostrar extends RecyclerView.Adapter<Adaptador_mostrar.ViewHolder> {
-List<Recyclerm>listacontenido;
+List<Adaptador_Recyclerm>listacontenido;
     //private Context context;
     TextToSpeech tts=null;
-public Adaptador_mostrar(List<Recyclerm>listacontenido){
+public Adaptador_mostrar(List<Adaptador_Recyclerm>listacontenido){
     this.listacontenido=listacontenido;
 }
     @Override

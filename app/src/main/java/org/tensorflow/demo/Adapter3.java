@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -35,8 +34,8 @@ public class Adapter3 extends RecyclerView.Adapter<Adapter3.ViewHolder>implement
 
         }
     }
-    public List<Recyclers3> listadieta2;
-    public Adapter3(List<Recyclers3>listadieta2){
+    public List<Adaptador_Recyclers3> listadieta2;
+    public Adapter3(List<Adaptador_Recyclers3>listadieta2){
         this.listadieta2=listadieta2;
 
     }

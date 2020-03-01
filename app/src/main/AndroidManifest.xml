@@ -71,31 +71,19 @@
         </activity>
 
         <activity android:name=".Videos" />
-        <activity android:name=".Lector" />
         <activity android:name=".Opciones" />
-        <activity android:name=".Visual" />
-        <activity android:name=".Auditivo" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Comunicativo" />
-        <activity android:name=".Inicio_Visual" />
-        <activity android:name=".Inicio_auditivo" />
+        <activity android:name=".Formulario_Datos_Usuario" />
+        <activity android:name=".Transicion_Dinosaurio" />
         <activity android:name=".Inicio_Comunicativo" />
-        <activity android:name=".BuscarUbicacion" />
-        <activity android:name=".ApernderLenguajeS" />
-        <activity android:name=".CursoAnimales" />
-        <activity android:name=".CursoSaludos" />
-        <activity android:name=".CursoSemana" />
         <activity android:name=".Traductor"  android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".EnviarImagen" />
         <activity android:name=".Resultados_Duolingo" />
         <activity android:name=".Duolingo" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".Menu_Cursos" />
-        <activity android:name=".Ventana_cursos_ejer" />
-        <activity android:name=".Ventana_Cursos_Ejer2" />
-        <activity android:name=".Ventana_Cursos3" />
+        <activity android:name=".Menu_Quiz" />
+        <activity android:name=".Ventana_Cursos_Ejer_Selec_Txt" />
+        <activity android:name=".Ventana_Cursos_Ejer_Selec_Sena" />
         <activity android:name=".Lector_Traductor" />
-        <activity android:name=".Main2Activity" />
+        <activity android:name=".Teclado_senas_voz" />
 
         <service
             android:name=".FloatingViewService"
@@ -103,11 +91,9 @@
             android:exported="false" />
 
         <activity android:name=".FloatingViewService2" />
-        <activity android:name=".Lector_Traductor2" />
         <activity android:name="org.tensorflow.tensorflowdemo.AM_Palabras_Rapidas" />
         <activity android:name=".Introduccion.Bienvenida" />
-        <activity android:name=".Introduccion.tutorial_primer_uso" />
-        <activity android:name=".Introduccion.tutorial_primer_uso_visual"></activity>
+        <activity android:name=".Introduccion.Tutorial_primer_uso" />
 
     </application>
 </manifest> <!-- MaterialTheme -->
