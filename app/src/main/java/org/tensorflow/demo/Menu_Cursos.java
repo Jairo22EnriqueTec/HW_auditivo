@@ -103,6 +103,7 @@ filal.setOnClickListener(new View.OnClickListener() {
     private void mostrar() {
         //int progreso1;
         //ya chingamos
+        int g=5;
         Puntaje conex=new Puntaje(this,"DBPuntaje",null,2);
         SQLiteDatabase db=conex.getReadableDatabase();
         Cursor cursor=db.rawQuery("SELECT PuntuacionMax FROM Puntaje",null);
