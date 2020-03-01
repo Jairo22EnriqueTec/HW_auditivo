@@ -19,7 +19,7 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by jj on 19/12/18.
+ * Created by jairo enrique on 19/12/18.
  */
 
 public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder>implements View.OnClickListener, View.OnLongClickListener {
