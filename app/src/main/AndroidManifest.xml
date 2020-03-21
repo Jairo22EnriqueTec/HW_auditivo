@@ -16,7 +16,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.tensorflow.demo">
+    package="org.helloworld.auditivo">
 
     <!--
         <uses-sdk
@@ -91,7 +91,7 @@
             android:exported="false" />
 
         <activity android:name=".FloatingViewService2" />
-        <activity android:name="org.tensorflow.tensorflowdemo.AM_Palabras_Rapidas" />
+        <activity android:name="org.helloworld.tensorflowdemo.AM_Palabras_Rapidas" />
         <activity android:name=".Introduccion.Bienvenida" />
         <activity android:name=".Introduccion.Tutorial_primer_uso" />
 

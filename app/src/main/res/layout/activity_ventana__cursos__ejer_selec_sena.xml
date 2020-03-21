@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ventana_Cursos_Ejer_Selec_Sena">
+    tools:context="org.helloworld.auditivo.Ventana_Cursos_Ejer_Selec_Sena">
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"

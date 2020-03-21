@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnviarImagen">
+    tools:context="org.helloworld.auditivo.EnviarImagen">
     <android.support.v7.widget.Toolbar
         android:background="@color/colorPrimaryDark"
         android:id="@+id/tool"

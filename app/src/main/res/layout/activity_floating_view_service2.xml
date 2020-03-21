@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.tensorflow.demo.FloatingViewService2">
+    tools:context="org.helloworld.auditivo.org.helloworld.demo.FloatingViewService2">
     <RelativeLayout
         android:id="@+id/root_container"
         android:layout_width="wrap_content"

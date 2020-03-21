@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.demo;
+package org.helloworld.auditivo;
 
 import android.Manifest;
 import android.app.Activity;

@@ -51,7 +51,7 @@ android_binary(
     ]),
     assets = glob(["assets/**"]),
     assets_dir = "assets",
-    custom_package = "org.tensorflow.demo",
+    custom_package = "org.helloworld.auditivo",
     inline_constants = 1,
     manifest = "AndroidManifest.xml",
     resource_files = glob(["res/**"]),

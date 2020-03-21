@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.tensorflow.demo;
+package org.helloworld.auditivo;
 
 import android.content.Context;
 import android.util.AttributeSet;

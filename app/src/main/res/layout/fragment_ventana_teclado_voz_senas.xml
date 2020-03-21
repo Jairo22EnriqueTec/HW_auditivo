@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ventana_Teclado_Voz_Senas"
+    tools:context="org.helloworld.auditivo.Ventana_Teclado_Voz_Senas"
     android:backgroundTint="@color/white"
     >
     <ImageView

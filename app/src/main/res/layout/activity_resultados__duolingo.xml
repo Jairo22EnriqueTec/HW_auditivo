@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Resultados_Duolingo">
+    tools:context="org.helloworld.auditivo.Resultados_Duolingo">
 
     <ImageView
         android:layout_width="match_parent"
