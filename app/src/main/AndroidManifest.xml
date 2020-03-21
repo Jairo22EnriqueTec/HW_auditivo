@@ -52,8 +52,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher2_round"
-        android:label=".AppController"
+        android:icon="@mipmap/ic_launcher_hw"
+        android:label="HW Auditivo"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".Carga_Inicio"
