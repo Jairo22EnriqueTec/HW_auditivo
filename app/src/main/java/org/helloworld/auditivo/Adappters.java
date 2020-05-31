@@ -15,6 +15,7 @@ import java.util.ArrayList;
  * Created by jairo enrique on 19/12/18.
  */
 // Comentario
+    //comentarioMiguel
 public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder>implements View.OnClickListener, View.OnLongClickListener {
     private View.OnClickListener listener;
     private View.OnLongClickListener listenerLong;

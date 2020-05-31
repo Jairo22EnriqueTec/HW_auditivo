@@ -60,7 +60,6 @@ El equipo de desarrollo espero que te sentan muy útiles, podamos ayudarte a cre
 
 
                 />
-
             <Button
                 android:layout_marginTop="6dp"
                 android:layout_width="match_parent"
