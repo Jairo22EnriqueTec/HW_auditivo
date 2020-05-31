@@ -58,6 +58,7 @@ El equipo de desarrollo espero que te sentan muy útiles, podamos ayudarte a cre
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
 
+
                 />
 
             <Button
