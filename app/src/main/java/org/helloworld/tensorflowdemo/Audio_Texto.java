@@ -596,6 +596,7 @@ public class Audio_Texto extends Fragment {
         frase=frase.replace("estare","estar");
         frase=frase.replace("estuve","estar");
         frase=frase.replace("estoy","yo estar");
+
         frase=frase.replace("quiero","querer");
         frase=frase.replace("querre","querer");
         frase=frase.replace("queria","querer");
