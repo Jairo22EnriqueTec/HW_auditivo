@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.helloworld.auditivo">
@@ -69,13 +68,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Videos" />
         <activity android:name=".Opciones" />
         <activity android:name=".Formulario_Datos_Usuario" />
         <activity android:name=".Transicion_Dinosaurio" />
         <activity android:name=".Inicio_Comunicativo" />
-        <activity android:name=".Traductor"  android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".Traductor"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".EnviarImagen" />
         <activity android:name=".Resultados_Duolingo" />
         <activity android:name=".Duolingo" />
@@ -94,6 +94,6 @@
         <activity android:name="org.helloworld.tensorflowdemo.AM_Palabras_Rapidas" />
         <activity android:name=".Introduccion.Bienvenida" />
         <activity android:name=".Introduccion.Tutorial_primer_uso" />
-
     </application>
+
 </manifest> <!-- MaterialTheme -->
