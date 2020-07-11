@@ -55,7 +55,7 @@ public class Carga_Inicio extends AppCompatActivity {
                 Datos_Usuario conex = new Datos_Usuario(getApplicationContext(), "DBUsuario", null, 2);
                 SQLiteDatabase db = conex.getReadableDatabase();
 
-                 //db.execSQL(dele);
+                 db.execSQL(dele);
                 final Cursor cursor = db.rawQuery("SELECT Discapacidad FROM Usuario", null);
                 boolean sino=true;
                 while (cursor.moveToNext()) {

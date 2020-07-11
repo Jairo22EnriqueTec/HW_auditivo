@@ -94,6 +94,7 @@
         <activity android:name="org.helloworld.tensorflowdemo.AM_Palabras_Rapidas" />
         <activity android:name=".Introduccion.Bienvenida" />
         <activity android:name=".Introduccion.Tutorial_primer_uso" />
+        <activity android:name=".Menu_Principal"></activity>
     </application>
 
 </manifest> <!-- MaterialTheme -->
