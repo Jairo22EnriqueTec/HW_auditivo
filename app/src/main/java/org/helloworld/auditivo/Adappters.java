@@ -20,16 +20,14 @@ public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder>impleme
     private View.OnClickListener listener;
     private View.OnLongClickListener listenerLong;
 
-
-
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView textView;
         public ViewHolder(View itemView) {
             super(itemView);
             textView=itemView.findViewById(R.id.temas);
         }
-
     }
+
     public ArrayList<Classes> list;
     public Adappters(ArrayList<Classes> list){
         this.list=list;
