@@ -35,6 +35,7 @@ CardView cardView, cardView2;
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent in=new Intent(getActivity(),Videos.class);
                 startActivity(in);
             }

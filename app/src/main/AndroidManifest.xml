@@ -53,14 +53,17 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_hw"
         android:label="HW Auditivo"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        >
         <activity
-            android:name=".Carga_Inicio"
+            android:name=".Menu_principall"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="com.google.android.gms.vision.DEPENDENCIES"
-                android:value="ocr" />
+                android:value="ocr"
+
+                />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,33 +71,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Videos" />
         <activity android:name=".Opciones" />
         <activity android:name=".Formulario_Datos_Usuario" />
         <activity android:name=".Transicion_Dinosaurio" />
         <activity android:name=".Inicio_Comunicativo" />
-        <activity
-            android:name=".Traductor"
-            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".EnviarImagen" />
         <activity android:name=".Resultados_Duolingo" />
         <activity android:name=".Duolingo" />
         <activity android:name=".Menu_Quiz" />
         <activity android:name=".Ventana_Cursos_Ejer_Selec_Txt" />
         <activity android:name=".Ventana_Cursos_Ejer_Selec_Sena" />
-        <activity android:name=".Lector_Traductor" />
-        <activity android:name=".Teclado_senas_voz" />
+        <activity android:name=".Lector_Traductor"/>
+        <activity android:name=".Teclado_senas_voz"/>
 
         <service
             android:name=".FloatingViewService"
             android:enabled="true"
-            android:exported="false" />
+            android:exported="false"/>
 
         <activity android:name=".FloatingViewService2" />
         <activity android:name="org.helloworld.tensorflowdemo.AM_Palabras_Rapidas" />
         <activity android:name=".Introduccion.Bienvenida" />
         <activity android:name=".Introduccion.Tutorial_primer_uso" />
-        <activity android:name=".Menu_Principal"></activity>
+        <activity android:name=".Traductor" />
+
+        <activity
+            android:name=".Carga_Inicio"
+            android:label="@string/title_activity_menu_principal"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 
 </manifest> <!-- MaterialTheme -->
