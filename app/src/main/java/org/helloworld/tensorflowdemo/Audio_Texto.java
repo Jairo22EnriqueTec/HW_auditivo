@@ -218,7 +218,6 @@ public class Audio_Texto extends Fragment {
             @Override
             public boolean onQueryTextSubmit(String query) {
                Decir_y_Mostrar(query);
-
                 return false;
             }
 

@@ -61,10 +61,7 @@
             android:screenOrientation="portrait">
             <meta-data
                 android:name="com.google.android.gms.vision.DEPENDENCIES"
-                android:value="ocr"
-
-                />
-
+                android:value="ocr" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
