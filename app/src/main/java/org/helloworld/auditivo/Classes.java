@@ -1,9 +1,5 @@
 package org.helloworld.auditivo;
 
-/**
- * Created by jj on 19/12/18.
- */
-
 public class Classes {
     private String texto;
     public String getTexto() {

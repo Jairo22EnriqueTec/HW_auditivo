@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 // Comentario
 //WeSiFunciono
-public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder>implements View.OnClickListener, View.OnLongClickListener {
+public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder> implements View.OnClickListener, View.OnLongClickListener {
     private View.OnClickListener listener;
     private View.OnLongClickListener listenerLong;
 

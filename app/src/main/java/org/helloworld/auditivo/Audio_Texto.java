@@ -149,17 +149,17 @@ public class Audio_Texto extends Fragment {
             @Override
             public void onClick(View v) {
                 Palabra=lista_palabras.get(recyclerView_palabras.getChildAdapterPosition(v)).getTexto();
-//Ventana_Teclado_Voz_Senas.llenarRecycler();
+                //Ventana_Teclado_Voz_Senas.llenarRecycler();
                 //Toast.makeText(Teclado_senas_voz.this, ""+tema, Toast.LENGTH_SHORT).show();
                 Decir_y_Mostrar(Palabra);
             }
         });
+
         adappters_palabras.setOnLongClickListener2(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 final String P=lista_palabras.get(recyclerView_palabras.getChildAdapterPosition(v)).getTexto();
                 //Toast.makeText(getContext(),P,Toast.LENGTH_SHORT).show();
-
 
                 final CharSequence[] opciones={"Eliminar frase","Cancelar"};
                 final AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
@@ -197,7 +197,7 @@ public class Audio_Texto extends Fragment {
 
 
 
-
+        //===========================================================================================================================
         rv = (RecyclerView) view.findViewById(R.id.rv);
         rv.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
@@ -206,7 +206,7 @@ public class Audio_Texto extends Fragment {
         //y esto en el xml
         //android:scrollbars="horizontal"
         rv.setLayoutManager(llm);
-
+//===========================================================================================================================
         cargarConversacion();
 
         sv = view.findViewById(R.id.searchview);
@@ -243,8 +243,8 @@ public class Audio_Texto extends Fragment {
         }
 
         checkPermission();
-
-//recognizer
+        //===========================================================================================================================
+        //recognizer
         mSpeechRecognizer = SpeechRecognizer.createSpeechRecognizer(getContext());
 
 
@@ -328,6 +328,7 @@ public class Audio_Texto extends Fragment {
 
             }
         });
+        //===========================================================================================================================
         final Handler handlerSpeech = new Handler();
         Timer timerSpeech = new Timer();
         TimerTask taskSpeech = new TimerTask() {
@@ -344,8 +345,9 @@ public class Audio_Texto extends Fragment {
                 });
             }
         };
-        timerSpeech.schedule(taskSpeech, 0, 8000);
 
+        timerSpeech.schedule(taskSpeech, 0, 8000);
+        //===========================================================================================================================
         btnOir =view.findViewById(R.id.btnOir);
         btnOir.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,74 +1,59 @@
+<!-- hola
 <RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     xmlns:android="http://schemas.android.com/apk/res/android" />
-<LinearLayout android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical">
 
-    <LinearLayout
+
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="52dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/fondo_toolbar"
+        android:id="@+id/frameLayout"
         android:layout_weight="1"
-        android:paddingTop="15dp">
-
-        <RelativeLayout
-            android:background="#fff"
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="xyz.libresoft.libresoft_app.DatosLugar"
-            android:layout_marginTop="6dp"
-            android:id="@+id/conten"
-            >
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                ></android.support.v7.widget.RecyclerView>
-        </RelativeLayout>
-
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="8.5"
+        android:layout_below="@+id/conten"
         >
-        <FrameLayout
+        <SearchView
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchview"
             android:layout_gravity="bottom"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/fondo_toolbar"
-            android:id="@+id/frameLayout"
+            android:queryHint="Hablar"
 
-            >
-            <SearchView
+            />
+    </FrameLayout>
+
+            <RelativeLayout
+                android:background="#fff"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/searchview"
-                android:layout_gravity="bottom"
-                android:queryHint="Buscar"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/conten"
 
-                />
-        </FrameLayout>
-    </LinearLayout>
+                >
 
-</LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentTop="true"
+                    ></android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+
+
 
 
     <android.support.design.widget.FloatingActionButton
@@ -139,4 +124,154 @@
 
             ></android.support.v7.widget.RecyclerView>
     </RelativeLayout>
-</RelativeLayout>
+</RelativeLayout> -->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.14"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/conten"
+
+                    >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_alignParentTop="true"
+                        ></android.support.v7.widget.RecyclerView>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.86"
+                android:layout_height="match_parent">
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/fondo_toolbar"
+                            android:id="@+id/frameLayout"
+
+                            android:layout_below="@+id/conten"
+                            >
+                            <SearchView
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:id="@+id/searchview"
+                                android:layout_gravity="bottom"
+                                android:searchIcon="@drawable/ic_action_talk"
+                                android:searchHintIcon="@drawable/ic_action_talk"
+                                android:goIcon="@drawable/ic_action_talk"
+                                android:commitIcon="@drawable/ic_action_talk"
+                                android:voiceIcon="@drawable/ic_action_talk"
+                                android:imeOptions="actionSend"
+                                android:queryHint="Responder" />
+                        </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_alignParentBottom="true">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/recycleropciones"
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    android:paddingLeft="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="55dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            app:backgroundTint="@color/colorPrimary"
+            android:id="@+id/btnOir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_hear"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="18dp"
+            app:fab_size="normal"
+            />
+
+        <Switch
+            android:id="@+id/swalfabeta"
+            android:layout_width="wrap_content"
+            android:text="Infinitivo    "
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/botnteclado"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:src="@drawable/teclado"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="95dp"
+            android:layout_marginEnd="20dp"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnEliminarconversacion"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:src="@drawable/ic_action_tache"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="155dp"
+            android:layout_marginEnd="20dp"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
