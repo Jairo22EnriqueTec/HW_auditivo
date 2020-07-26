@@ -1,4 +1,4 @@
-package org.helloworld.tensorflowdemo;
+package org.helloworld.auditivo;
 
 import android.Manifest;
 import android.content.Context;
@@ -31,14 +31,10 @@ import android.widget.SearchView;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import org.helloworld.auditivo.Adappters;
 import org.helloworld.auditivo.Adaptadores.AdaptadorAssistent;
 import org.helloworld.auditivo.Clases.Elemen;
 import org.helloworld.auditivo.Clases.VariablesYDatos;
-import org.helloworld.auditivo.Classes;
-import org.helloworld.auditivo.Datos_Usuario;
-import org.helloworld.auditivo.Teclado_senas_voz;
-import org.helloworld.auditivo.R;
+import org.helloworld.tensorflowdemo.AM_Palabras_Rapidas;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -734,7 +730,7 @@ public class Audio_Texto extends Fragment {
         //recibir la palabra, sacarla por voz y mostrarla.
 
         if(query.equalsIgnoreCase("Agregar +")){
-            startActivity(new Intent(getContext(),AM_Palabras_Rapidas.class));
+            startActivity(new Intent(getContext(), AM_Palabras_Rapidas.class));
         }else {
             Elemen mess = new Elemen();
             mess.setLado(true);

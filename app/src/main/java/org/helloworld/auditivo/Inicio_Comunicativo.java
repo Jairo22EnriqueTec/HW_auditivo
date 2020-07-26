@@ -8,9 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import org.helloworld.auditivo.R;
-import org.helloworld.tensorflowdemo.Audio_Texto;
-
 public class Inicio_Comunicativo extends AppCompatActivity implements Audio_Texto.OnFragmentInteractionListener {
     public static Fragment select=null;
     BottomNavigationView bview;
