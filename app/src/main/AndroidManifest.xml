@@ -51,7 +51,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_hw"
+        android:icon="@drawable/icono_hw_google_play_transparente"
         android:label="HW Auditivo"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         >

@@ -29,6 +29,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SearchView;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.helloworld.auditivo.Adaptadores.Adaptador_Card_Conversar;
@@ -82,6 +83,7 @@ public class Audio_Texto extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private TextView Estado_escucha;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -127,6 +129,7 @@ public class Audio_Texto extends Fragment {
         View view =inflater.inflate(R.layout.fragment_audio__texto, container, false);
 
         swalfa=view.findViewById(R.id.swalfabeta);
+        Estado_escucha = view.findViewById(R.id.Estado_escucha);
         //
         Datos_Usuario conex=new Datos_Usuario(getActivity(),"DBUsuario",null,2);
         SQLiteDatabase db=conex.getReadableDatabase();
@@ -257,7 +260,7 @@ public class Audio_Texto extends Fragment {
         mSpeechRecognizer.setRecognitionListener(new RecognitionListener() {
             @Override
             public void onReadyForSpeech(Bundle bundle) {
-
+                Estado_escucha.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -290,6 +293,7 @@ public class Audio_Texto extends Fragment {
             @Override
             public void onResults(Bundle bundle) {
                 //getting all the matches
+                Estado_escucha.setVisibility(View.GONE);
                 ArrayList<String> matches = bundle
                         .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
 
@@ -319,11 +323,12 @@ public class Audio_Texto extends Fragment {
             public void onPartialResults(Bundle bundle) {
                 ArrayList<String> matches = bundle
                         .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-                Log.i("AQUI", "partial");
+                Log.i("AQUI", "Hay parciales");
+                Toast.makeText(getContext(),"Hay parciales", Toast.LENGTH_LONG).show();
 
                 String[] results =
                         bundle.getStringArray("com.google.android.voicesearch.UNSUPPORTED_PARTIAL_RESULTS");
-                Toast.makeText(getContext(),results.toString(), Toast.LENGTH_LONG).show();
+
             }
 
             @Override
