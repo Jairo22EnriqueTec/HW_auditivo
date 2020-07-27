@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.helloworld.auditivo.R;
-
 import java.util.ArrayList;
 
 /**
@@ -16,7 +14,7 @@ import java.util.ArrayList;
  */
 // Comentario
 //WeSiFunciono
-public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder> implements View.OnClickListener, View.OnLongClickListener {
+public class Adappter_Palabras_Rapidas_Conversar extends RecyclerView.Adapter<Adappter_Palabras_Rapidas_Conversar.ViewHolder> implements View.OnClickListener, View.OnLongClickListener {
     private View.OnClickListener listener;
     private View.OnLongClickListener listenerLong;
 
@@ -29,13 +27,13 @@ public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder> implem
     }
 
     public ArrayList<Classes> list;
-    public Adappters(ArrayList<Classes> list){
+    public Adappter_Palabras_Rapidas_Conversar(ArrayList<Classes> list){
         this.list=list;
     }
     @NonNull
     @Override
-    public Adappters.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler,null,false);
+    public Adappter_Palabras_Rapidas_Conversar.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.card_conversor_palabras_rapidas,null,false);
         ViewHolder viewHolder=new ViewHolder(view);
         view.setOnClickListener(this);
         view.setOnLongClickListener(this);
@@ -43,7 +41,7 @@ public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder> implem
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adappters.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Adappter_Palabras_Rapidas_Conversar.ViewHolder holder, int position) {
         holder.textView.setText(list.get(position).getTexto());
 
     }

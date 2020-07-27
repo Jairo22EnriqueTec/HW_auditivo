@@ -31,13 +31,11 @@ import android.widget.SearchView;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import org.helloworld.auditivo.Adaptadores.AdaptadorAssistent;
-import org.helloworld.auditivo.Clases.Elemen;
+import org.helloworld.auditivo.Adaptadores.Adaptador_Card_Conversar;
+import org.helloworld.auditivo.Clases.Elementos_Card_Conversacion;
 import org.helloworld.auditivo.Clases.VariablesYDatos;
 import org.helloworld.tensorflowdemo.AM_Palabras_Rapidas;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Timer;
@@ -66,12 +64,12 @@ public class Audio_Texto extends Fragment {
     RecyclerView rv, recyclerView_palabras;
 
 
-    Adappters adappters_palabras=null;
-    AdaptadorAssistent adapter = null;
+    Adappter_Palabras_Rapidas_Conversar adappters_palabras = null;
+    Adaptador_Card_Conversar adapter = null;
 
     int mayor=0,contador=1;
     String palMayor="";
-    ArrayList<Elemen> lista;
+    ArrayList<Elementos_Card_Conversacion> lista;
     ArrayList<Classes> lista_palabras;
     SearchView sv;
     String Palabra="";
@@ -142,7 +140,7 @@ public class Audio_Texto extends Fragment {
         }
         recyclerView_palabras=view.findViewById(R.id.recycleropciones);
         lista_palabras=new ArrayList<>();
-        adappters_palabras=new Adappters(lista_palabras);
+        adappters_palabras=new Adappter_Palabras_Rapidas_Conversar(lista_palabras);
 
         adappters_palabras.setOnClickListener2(new View.OnClickListener() {
             @Override
@@ -198,7 +196,7 @@ public class Audio_Texto extends Fragment {
 
         //===========================================================================================================================
         rv = (RecyclerView) view.findViewById(R.id.rv);
-        adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
+        adapter = new Adaptador_Card_Conversar(VariablesYDatos.Conversacion);
 
         rv.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
@@ -304,14 +302,14 @@ public class Audio_Texto extends Fragment {
                    //     Toast.makeText(getContext(),input,Toast.LENGTH_LONG).show();
                         input= comparar(input.split(" "));
                     }
-                    Elemen mess=new Elemen();
+                    Elementos_Card_Conversacion mess=new Elementos_Card_Conversacion();
                     mess.setLado(false);
                     mess.setNombre(NombreAsistente);
                     mess.setMensaje(input);
                     //=============
                     VariablesYDatos.Conversacion.add(0, mess);
                     //Organizandolos temporalmente
-                    adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
+                    adapter = new Adaptador_Card_Conversar(VariablesYDatos.Conversacion);
                     rv.setAdapter(adapter);
                 }
             }
@@ -378,7 +376,7 @@ public class Audio_Texto extends Fragment {
 
     private void cargarConversacion() {
 
-            adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
+            adapter = new Adaptador_Card_Conversar(VariablesYDatos.Conversacion);
             rv.setAdapter(adapter);
 
     }
@@ -742,12 +740,12 @@ public class Audio_Texto extends Fragment {
         if(query.equalsIgnoreCase("Agregar +")){
             startActivity(new Intent(getContext(), AM_Palabras_Rapidas.class));
         }else {
-            Elemen mess = new Elemen();
+            Elementos_Card_Conversacion mess = new Elementos_Card_Conversacion();
             mess.setLado(true);
             mess.setNombre(NombreUsuario);
             mess.setMensaje(query);
             VariablesYDatos.Conversacion.add(0, mess);
-            AdaptadorAssistent adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
+            Adaptador_Card_Conversar adapter = new Adaptador_Card_Conversar(VariablesYDatos.Conversacion);
             rv.setAdapter(adapter);
             Hablar(query);
         }

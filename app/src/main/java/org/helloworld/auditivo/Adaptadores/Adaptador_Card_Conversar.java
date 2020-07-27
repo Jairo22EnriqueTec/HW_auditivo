@@ -1,11 +1,7 @@
 package org.helloworld.auditivo.Adaptadores;
 
-import android.content.DialogInterface;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.speech.tts.TextToSpeech;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
@@ -16,8 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.helloworld.auditivo.Clases.Elemen;
-import org.helloworld.auditivo.Datos_Usuario;
+import org.helloworld.auditivo.Clases.Elementos_Card_Conversacion;
 import org.helloworld.auditivo.R;
 import java.util.List;
 import java.util.Locale;
@@ -27,17 +22,17 @@ import java.util.Locale;
  * Created by azulm on 21/04/2018.
  */
 
-public class AdaptadorAssistent extends RecyclerView.Adapter<AdaptadorAssistent.adaptadorHolder>{
+public class Adaptador_Card_Conversar extends RecyclerView.Adapter<Adaptador_Card_Conversar.adaptadorHolder>{
         private View.OnClickListener listener;
         private View.OnLongClickListener listenerLong;
 
 
-    List<Elemen> ListaElemen;
+    List<Elementos_Card_Conversacion> ListaElemen;
     public TextToSpeech toSpeech;
     int result=0;
 
 
-    public AdaptadorAssistent(List<Elemen> listaElemen) {
+    public Adaptador_Card_Conversar(List<Elementos_Card_Conversacion> listaElemen) {
         this.ListaElemen = listaElemen;
     }
 
@@ -60,19 +55,19 @@ public class AdaptadorAssistent extends RecyclerView.Adapter<AdaptadorAssistent.
             e.printStackTrace();
         }
 
-    /*    View vista= LayoutInflater.from(parent.getContext()).inflate(R.layout.elemento,parent,false);
+    /*    View vista= LayoutInflater.from(parent.getContext()).inflate(R.layout.card_conversacion,parent,false);
         RecyclerView.LayoutParams layoutParams=new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         vista.setLayoutParams(layoutParams);*/
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.elemento,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_conversacion,parent,false);
         final adaptadorHolder holder = new adaptadorHolder(v);
 
-holder.contenedor.setOnClickListener(new View.OnClickListener() {
+    holder.contenedor.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         toSpeech.speak(ListaElemen.get(holder.getAdapterPosition()).getMensaje(),TextToSpeech.QUEUE_FLUSH, null);
-    }
+        }
 });
 
 holder.contenedor.setOnLongClickListener(new View.OnLongClickListener() {
@@ -102,7 +97,7 @@ holder.contenedor.setOnLongClickListener(new View.OnLongClickListener() {
     }
 
     @Override
-    public void onBindViewHolder(AdaptadorAssistent.adaptadorHolder holder, int position) {
+    public void onBindViewHolder(Adaptador_Card_Conversar.adaptadorHolder holder, int position) {
         try {
             holder.txtMensaje.setText(ListaElemen.get(position).getMensaje().toString());
             holder.txtNombre.setText(ListaElemen.get(position).getNombre().toString());

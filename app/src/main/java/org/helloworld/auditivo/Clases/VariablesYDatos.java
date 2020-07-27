@@ -1178,7 +1178,7 @@ public class VariablesYDatos {
                     "Motocicleta",
                     "Television"
             };
-    public static ArrayList<Elemen> Conversacion = new ArrayList<>();//que dijo
+    public static ArrayList<Elementos_Card_Conversacion> Conversacion = new ArrayList<>();//que dijo
 
 
     public static String Bienvenida_a_HW="¡Hola!, estás usando la aplicacción móvil llamada Hello World, escucha con atención el tutorial rápido.\n\n" +

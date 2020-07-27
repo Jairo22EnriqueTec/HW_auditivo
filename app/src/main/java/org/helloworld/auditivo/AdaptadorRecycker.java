@@ -7,8 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.helloworld.auditivo.R;
-
 import java.util.List;
 
 /**
@@ -45,7 +43,7 @@ linear=itemView.findViewById(R.id.image);
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler,parent, false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.card_conversor_palabras_rapidas,parent, false);
         ViewHolder viewHolder=new ViewHolder(view);
         view.setOnClickListener(this);
         return viewHolder;

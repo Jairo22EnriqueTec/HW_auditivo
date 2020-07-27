@@ -15,15 +15,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_weight="0.14"
+                android:layout_weight="0.18"
                 android:layout_height="match_parent">
+
                 <RelativeLayout
-                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/conten"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="6dp"
-                    android:layout_marginBottom="15dp"
-                    android:id="@+id/conten"
+                    android:layout_marginBottom="1dp"
 
                     >
 
@@ -31,17 +31,16 @@
                         android:id="@+id/rv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
                         android:layout_alignParentTop="true"
-                        ></android.support.v7.widget.RecyclerView>
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"></android.support.v7.widget.RecyclerView>
                 </RelativeLayout>
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_weight="0.86"
+                android:layout_weight="0.82"
                 android:weightSum="1"
                 android:orientation="horizontal"
                 android:layout_height="match_parent">
@@ -91,6 +90,7 @@
                 android:orientation="horizontal"
                 android:gravity="center"
 
+
                 android:layout_alignParentBottom="true">
                 <android.support.v7.widget.RecyclerView
                     android:layout_marginTop="20dp"
@@ -117,8 +117,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
             android:textSize="15dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btnEliminarconversacion"
@@ -128,8 +127,8 @@
             app:backgroundTint="@color/Azul_HW"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="155dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="15dp"
             />
 
     </RelativeLayout>

@@ -4,7 +4,7 @@ package org.helloworld.auditivo.Clases;
  * Created by CHENAO on 6/08/2017.
  */
 
-public class Elemen {
+public class Elementos_Card_Conversacion {
 
  private String nombre;
  private String mensaje;
