@@ -36,6 +36,8 @@ import org.helloworld.auditivo.Clases.Elemen;
 import org.helloworld.auditivo.Clases.VariablesYDatos;
 import org.helloworld.tensorflowdemo.AM_Palabras_Rapidas;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Timer;
@@ -62,7 +64,11 @@ import static org.helloworld.auditivo.Clases.VariablesYDatos.VerbosInfinitivo;
  */
 public class Audio_Texto extends Fragment {
     RecyclerView rv, recyclerView_palabras;
+
+
     Adappters adappters_palabras=null;
+    AdaptadorAssistent adapter = null;
+
     int mayor=0,contador=1;
     String palMayor="";
     ArrayList<Elemen> lista;
@@ -145,6 +151,7 @@ public class Audio_Texto extends Fragment {
         recyclerView_palabras=view.findViewById(R.id.recycleropciones);
         lista_palabras=new ArrayList<>();
         adappters_palabras=new Adappters(lista_palabras);
+
         adappters_palabras.setOnClickListener2(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -162,7 +169,7 @@ public class Audio_Texto extends Fragment {
                 //Toast.makeText(getContext(),P,Toast.LENGTH_SHORT).show();
 
                 final CharSequence[] opciones={"Eliminar frase","Cancelar"};
-                final AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
+                final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
                 builder.setTitle("Eliminar palabra");
                 builder.setIcon(R.drawable.ic_action_tache);
                 builder.setItems(opciones, new DialogInterface.OnClickListener() {
@@ -199,6 +206,8 @@ public class Audio_Texto extends Fragment {
 
         //===========================================================================================================================
         rv = (RecyclerView) view.findViewById(R.id.rv);
+        adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
+
         rv.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
 
@@ -224,8 +233,8 @@ public class Audio_Texto extends Fragment {
         });
 
 
-
-//Tospeech
+        //===========================================================================================================================
+        //Tospeech
 
         try {
             toSpeech = new TextToSpeech(getActivity(), new TextToSpeech.OnInitListener() {
@@ -309,8 +318,10 @@ public class Audio_Texto extends Fragment {
                     mess.setLado(false);
                     mess.setNombre(NombreAsistente);
                     mess.setMensaje(input);
-                    VariablesYDatos.Conversacion.add(mess);
-                    AdaptadorAssistent adapter=new AdaptadorAssistent(VariablesYDatos.Conversacion);
+                    //=============
+                    VariablesYDatos.Conversacion.add(0, mess);
+                    //Organizandolos temporalmente
+                    adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
                     rv.setAdapter(adapter);
                 }
             }
@@ -358,6 +369,7 @@ public class Audio_Texto extends Fragment {
         });
 
         btnEliminarConversa=view.findViewById(R.id.btnEliminarconversacion);
+
         btnEliminarConversa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -371,7 +383,8 @@ public class Audio_Texto extends Fragment {
     }
 
     private void cargarConversacion() {
-            AdaptadorAssistent adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
+
+            adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
             rv.setAdapter(adapter);
 
     }
@@ -721,6 +734,7 @@ public class Audio_Texto extends Fragment {
         lista_palabras.add(new Classes("Mi nombre es: "+NombreUsuario));
         lista_palabras.add(new Classes("Agregar +"));
     }
+
     private void borrarRecycler() {
         recyclerView_palabras.removeAllViewsInLayout();
         final int size = lista_palabras.size();
@@ -738,7 +752,7 @@ public class Audio_Texto extends Fragment {
             mess.setLado(true);
             mess.setNombre(NombreUsuario);
             mess.setMensaje(query);
-            VariablesYDatos.Conversacion.add(mess);
+            VariablesYDatos.Conversacion.add(0, mess);
             AdaptadorAssistent adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
             rv.setAdapter(adapter);
 

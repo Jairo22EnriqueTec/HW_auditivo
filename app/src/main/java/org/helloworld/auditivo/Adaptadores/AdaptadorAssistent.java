@@ -1,6 +1,10 @@
 package org.helloworld.auditivo.Adaptadores;
 
+import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.speech.tts.TextToSpeech;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
@@ -9,9 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import org.helloworld.auditivo.Clases.Elemen;
+import org.helloworld.auditivo.Datos_Usuario;
 import org.helloworld.auditivo.R;
 import java.util.List;
+import java.util.Locale;
 
 
 /**
@@ -19,9 +27,14 @@ import java.util.List;
  */
 
 public class AdaptadorAssistent extends RecyclerView.Adapter<AdaptadorAssistent.adaptadorHolder>{
+        private View.OnClickListener listener;
+        private View.OnLongClickListener listenerLong;
 
 
     List<Elemen> ListaElemen;
+    public TextToSpeech toSpeech;
+    int result=0;
+
 
     public AdaptadorAssistent(List<Elemen> listaElemen) {
         this.ListaElemen = listaElemen;
@@ -29,6 +42,23 @@ public class AdaptadorAssistent extends RecyclerView.Adapter<AdaptadorAssistent.
 
     @Override
     public adaptadorHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
+        //Tospeech
+
+        try {
+            toSpeech = new TextToSpeech(parent.getContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int status) {
+                    if (status == TextToSpeech.SUCCESS) {
+                        result = toSpeech.setLanguage(Locale.getDefault());
+                    } else {
+                        Toast.makeText(parent.getContext(), "Feature not supported in your device", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     /*    View vista= LayoutInflater.from(parent.getContext()).inflate(R.layout.elemento,parent,false);
         RecyclerView.LayoutParams layoutParams=new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -39,8 +69,30 @@ public class AdaptadorAssistent extends RecyclerView.Adapter<AdaptadorAssistent.
 holder.contenedor.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        toSpeech.speak(ListaElemen.get(holder.getAdapterPosition()).getMensaje(),TextToSpeech.QUEUE_FLUSH, null);
+    }
+});
 
+holder.contenedor.setOnLongClickListener(new View.OnLongClickListener() {
+    @Override
+    public boolean onLongClick(View view) {
+/*
+        final CharSequence[] opciones={"Reproducir","Cancelar"};
 
+        final AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+        builder.setTitle("Seleccione");
+        builder.setIcon(R.drawable.ic_action_talk);
+        builder.setItems(opciones, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                if (opciones[i].equals("Reproducir")){
+                    toSpeech.speak(ListaElemen.get(holder.getAdapterPosition()).getMensaje(),TextToSpeech.QUEUE_FLUSH, null);
+                }
+            }
+        });
+        builder.show();
+*/
+        return false;
     }
 });
 
@@ -67,11 +119,13 @@ holder.contenedor.setOnClickListener(new View.OnClickListener() {
         }
     }
 
+
     @Override
     public int getItemCount() {
         return ListaElemen.size();
     }
-        public class adaptadorHolder extends RecyclerView.ViewHolder{
+
+    public class adaptadorHolder extends RecyclerView.ViewHolder{
             TextView txtMensaje,txtNombre;
             LinearLayout content;
             CardView contenedor;

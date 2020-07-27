@@ -56,6 +56,7 @@ public class Adappters extends RecyclerView.Adapter<Adappters.ViewHolder> implem
     public void setOnClickListener2(View.OnClickListener listenerr){
         this.listener=listenerr;
     }
+
     public void setOnLongClickListener2(View.OnLongClickListener listenerr){
         listenerLong=listenerr;
     }
