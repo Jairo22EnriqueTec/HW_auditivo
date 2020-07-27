@@ -1,130 +1,3 @@
-<!-- hola
-<RelativeLayout android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    xmlns:android="http://schemas.android.com/apk/res/android" />
-
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/fondo_toolbar"
-        android:id="@+id/frameLayout"
-        android:layout_weight="1"
-        android:layout_below="@+id/conten"
-        >
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/searchview"
-            android:layout_gravity="bottom"
-            android:queryHint="Hablar"
-
-            />
-    </FrameLayout>
-
-            <RelativeLayout
-                android:background="#fff"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/conten"
-
-                >
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_alignParentTop="true"
-                    ></android.support.v7.widget.RecyclerView>
-            </RelativeLayout>
-
-
-
-
-
-    <android.support.design.widget.FloatingActionButton
-        app:backgroundTint="@color/colorPrimary"
-        android:id="@+id/btnOir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_action_microphone"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="18dp"
-        app:fab_size="normal"
-        />
-    <Switch
-        android:id="@+id/swalfabeta"
-        android:layout_width="wrap_content"
-        android:text="Infinitivo    "
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="120dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/botnteclado"
-        android:layout_width="47dp"
-        android:layout_height="47dp"
-        android:src="@drawable/teclado"
-        app:backgroundTint="@color/colorPrimary"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="20dp"
-        />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnEliminarconversacion"
-        android:layout_width="47dp"
-        android:layout_height="47dp"
-        android:src="@drawable/ic_action_tache"
-        app:backgroundTint="@color/colorPrimary"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="155dp"
-        android:layout_marginEnd="20dp"
-        />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_alignParentBottom="true"
-
-        >
-        <android.support.v7.widget.RecyclerView
-            android:layout_marginTop="20dp"
-            android:id="@+id/recycleropciones"
-            android:padding="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="horizontal"
-            android:paddingLeft="15dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="60dp"
-
-            ></android.support.v7.widget.RecyclerView>
-    </RelativeLayout>
-</RelativeLayout> -->
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -169,17 +42,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_weight="0.86"
+                android:weightSum="1"
+                android:orientation="horizontal"
                 android:layout_height="match_parent">
-                        <FrameLayout
+                        <android.support.v7.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="55dp"
+                            android:layout_weight="1.1"
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="bottom"
-                            android:background="@drawable/fondo_toolbar"
-                            android:id="@+id/frameLayout"
-
-                            android:layout_below="@+id/conten"
-                            >
+                            app:cardCornerRadius="25dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="2dp"
+                            app:cardBackgroundColor="@color/Azul_HW"
+                            android:layout_height="55dp">
                             <SearchView
                                 android:layout_width="match_parent"
                                 android:layout_height="55dp"
@@ -192,18 +67,30 @@
                                 android:voiceIcon="@drawable/ic_action_talk"
                                 android:imeOptions="actionSend"
                                 android:queryHint="Responder" />
-                        </FrameLayout>
+                        </android.support.v7.widget.CardView>
+
+                <android.support.design.widget.FloatingActionButton
+                    app:backgroundTint="@color/Azul_HW"
+                    android:id="@+id/btnOir"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_action_hear"
+                    android:layout_gravity="bottom"
+                    app:fab_size="normal" />
+
             </LinearLayout>
 
 
         </LinearLayout>
-
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
+
                 android:layout_alignParentBottom="true">
                 <android.support.v7.widget.RecyclerView
                     android:layout_marginTop="20dp"
@@ -212,28 +99,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scrollbars="horizontal"
-                    android:paddingLeft="15dp"
                     android:layout_gravity="center"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginBottom="55dp">
+                    android:layout_marginRight="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginBottom="60dp">
 
                 </android.support.v7.widget.RecyclerView>
             </RelativeLayout>
-
-
-
-        <android.support.design.widget.FloatingActionButton
-            app:backgroundTint="@color/colorPrimary"
-            android:id="@+id/btnOir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_hear"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="18dp"
-            app:fab_size="normal"
-            />
 
         <Switch
             android:id="@+id/swalfabeta"
@@ -241,7 +113,7 @@
             android:text="Infinitivo    "
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="120dp"
+            android:layout_marginBottom="105dp"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
             android:textSize="15dp"
@@ -249,23 +121,11 @@
             />
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/botnteclado"
-            android:layout_width="47dp"
-            android:layout_height="47dp"
-            android:src="@drawable/teclado"
-            app:backgroundTint="@color/colorPrimary"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="95dp"
-            android:layout_marginEnd="20dp"
-            />
-
-        <android.support.design.widget.FloatingActionButton
             android:id="@+id/btnEliminarconversacion"
-            android:layout_width="47dp"
-            android:layout_height="47dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/ic_action_tache"
-            app:backgroundTint="@color/colorPrimary"
+            app:backgroundTint="@color/Azul_HW"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="155dp"

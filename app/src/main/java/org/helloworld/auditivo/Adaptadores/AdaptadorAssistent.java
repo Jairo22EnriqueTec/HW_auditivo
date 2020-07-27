@@ -3,6 +3,7 @@ package org.helloworld.auditivo.Adaptadores;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
@@ -63,6 +64,7 @@ public class AdaptadorAssistent extends RecyclerView.Adapter<AdaptadorAssistent.
         RecyclerView.LayoutParams layoutParams=new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         vista.setLayoutParams(layoutParams);*/
+
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.elemento,parent,false);
         final adaptadorHolder holder = new adaptadorHolder(v);
 

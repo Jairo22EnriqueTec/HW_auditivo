@@ -5,9 +5,9 @@
     android:layout_marginTop="2dp"
     android:padding="8dp"
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="left"
+
     android:id="@+id/content"
 
     >
@@ -16,12 +16,11 @@
         app:cardBackgroundColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:cardElevation="4dp"
+        app:cardElevation="10dp"
         android:layout_marginBottom="3dp"
         android:padding="8dp"
         android:id="@+id/contenedor"
-        android:layout_gravity="right"
-        >
+        android:layout_gravity="right">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +40,7 @@
                     android:text="Nombre:"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/txtMensaje"
                     android:layout_width="wrap_content"

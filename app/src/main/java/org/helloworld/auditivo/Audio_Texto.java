@@ -77,7 +77,7 @@ public class Audio_Texto extends Fragment {
     String Palabra="";
     Switch swalfa;
     int result;
-    FloatingActionButton btnOir,imageButton,btnEliminarConversa;
+    FloatingActionButton btnOir,btnEliminarConversa;
     public TextToSpeech toSpeech;
     SpeechRecognizer mSpeechRecognizer;
     String NombreUsuario="",NombreAsistente="Mundo";
@@ -129,14 +129,6 @@ public class Audio_Texto extends Fragment {
         View view =inflater.inflate(R.layout.fragment_audio__texto, container, false);
 
         swalfa=view.findViewById(R.id.swalfabeta);
-        imageButton=view.findViewById(R.id.botnteclado);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), Teclado_senas_voz.class);
-                startActivity(intent);
-            }
-        });
         //
         Datos_Usuario conex=new Datos_Usuario(getActivity(),"DBUsuario",null,2);
         SQLiteDatabase db=conex.getReadableDatabase();
@@ -268,12 +260,11 @@ public class Audio_Texto extends Fragment {
             @Override
             public void onReadyForSpeech(Bundle bundle) {
 
-                Log.i("AQUI", "ready");
             }
 
             @Override
             public void onBeginningOfSpeech() {
-                Log.i("AQUI", "begin");
+
             }
 
             @Override
@@ -283,19 +274,18 @@ public class Audio_Texto extends Fragment {
 
             @Override
             public void onBufferReceived(byte[] bytes) {
-                Log.i("AQUI", "buffer");
+
             }
 
             @Override
             public void onEndOfSpeech() {
 
-                Log.i("AQUI", "end");
 
             }
 
             @Override
             public void onError(int i) {
-                Log.i("AQUI", "error" + i);
+
             }
 
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -332,6 +322,10 @@ public class Audio_Texto extends Fragment {
                 ArrayList<String> matches = bundle
                         .getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
                 Log.i("AQUI", "partial");
+
+                String[] results =
+                        bundle.getStringArray("com.google.android.voicesearch.UNSUPPORTED_PARTIAL_RESULTS");
+                Toast.makeText(getContext(),results.toString(), Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -755,7 +749,6 @@ public class Audio_Texto extends Fragment {
             VariablesYDatos.Conversacion.add(0, mess);
             AdaptadorAssistent adapter = new AdaptadorAssistent(VariablesYDatos.Conversacion);
             rv.setAdapter(adapter);
-
             Hablar(query);
         }
 
