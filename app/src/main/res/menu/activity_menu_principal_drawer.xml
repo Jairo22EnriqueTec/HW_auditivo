@@ -13,15 +13,14 @@
             android:icon="@drawable/teclado"
             android:title="@string/Pictogramas"
             />
-
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_action_hear"
+            android:icon="@drawable/ic_action_talk"
             android:title="@string/Conversar" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/libro"
-            android:title="@string/Cursos"/>
+            android:title="Aprender"/>
     </group>
 
     <item android:title="Cuenta">
