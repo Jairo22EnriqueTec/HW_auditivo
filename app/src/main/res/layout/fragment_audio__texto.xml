@@ -52,7 +52,7 @@
                             app:cardCornerRadius="25dp"
                             android:layout_marginBottom="5dp"
                             android:layout_marginLeft="2dp"
-                            app:cardBackgroundColor="@color/Azul_HW"
+                            app:cardBackgroundColor="@color/colorazul"
                             android:layout_height="55dp">
                             <SearchView
                                 android:layout_width="match_parent"
@@ -69,7 +69,7 @@
                         </android.support.v7.widget.CardView>
 
                 <android.support.design.widget.FloatingActionButton
-                    app:backgroundTint="@color/Azul_HW"
+                    app:backgroundTint="@color/colorazul"
                     android:id="@+id/btnOir"
                     android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/Estado_escucha"
             android:text="Escuchando..."
-            android:textColor="@color/Azul_HW"
+            android:textColor="@color/colorazul"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_alignParentBottom="true"
@@ -138,7 +138,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/ic_action_tache"
-            app:backgroundTint="@color/Azul_HW"
+            app:backgroundTint="@color/colorazul"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="220dp"

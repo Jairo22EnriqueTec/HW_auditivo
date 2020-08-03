@@ -23,7 +23,7 @@
             android:text="Hola"
             android:textSize="18dp"
             android:padding="5dp"
-            android:textColor="@color/Azul_HW"
+            android:textColor="@color/colorazul"
             android:textStyle="bold"
             android:gravity="center" />
 

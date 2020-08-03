@@ -74,14 +74,16 @@ public class Menu_principall extends AppCompatActivity
         boolean fragmentseleccionado=false;
 
         if (id == R.id.nav_camera) {
-            Toast.makeText(this, "Traductor", Toast.LENGTH_SHORT).show();
+            fragment=new Traductorr();
+            fragmentseleccionado=true;
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
             fragment=new Audio_Texto();
             fragmentseleccionado=true;
         } else if (id == R.id.nav_manage) {
-            Toast.makeText(this, "Cursos", Toast.LENGTH_SHORT).show();
+            fragment=new Cursos_F();
+            fragmentseleccionado=true;
         } else if (id == R.id.nav_share) {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_send) {

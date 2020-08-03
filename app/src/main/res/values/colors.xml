@@ -16,7 +16,7 @@
 -->
 <resources>
     <color name="control_background">#cc4285f4</color>
-    <color name="blanco">#FDFDFDFD</color>
+    <color name="blanco">#fdfdfdfd</color>
     <color name="colorPrimary">#FF5AB7FF</color>
     <color name="colorPrimaryDark">#367ff4</color>
     <color name="colorAccent">#efebec</color>
@@ -45,5 +45,6 @@
     <color name="colorazul">#1696f9</color>
     <color name="ciolor">#c8e3f9</color>
     <color name="jf">#e6e4e4</color>
-    <color name="Azul_HW">#3399FF</color>
+    <color name="hueso">#dfdfdf</color>
+    <color name="Aceptar">#1b6def</color>
 </resources>
