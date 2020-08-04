@@ -47,4 +47,9 @@
     <color name="jf">#e6e4e4</color>
     <color name="hueso">#dfdfdf</color>
     <color name="Aceptar">#1b6def</color>
+    <color name="HW_azul">#3399FF</color>
+    <color name="HW_verde">#33FF66</color>
+    <color name="HW_naranja">#FF9933</color>
+    <color name="HW_rojo">#FF3333</color>
+    <color name="HW_amarilo">#FAED27</color>
 </resources>
