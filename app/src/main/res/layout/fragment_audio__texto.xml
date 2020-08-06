@@ -132,7 +132,7 @@
             android:layout_marginLeft="10dp"
             android:visibility="gone"
             />
-
+<!--
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btnEliminarconversacion"
             android:layout_width="50dp"
@@ -144,7 +144,19 @@
             android:layout_marginTop="220dp"
             android:layout_marginEnd="15dp"
             />
-
+Temporal change
+-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnEliminarconversacion"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_action_guardar"
+            app:backgroundTint="@color/colorazul"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="220dp"
+            android:layout_marginEnd="15dp"
+            />
     </RelativeLayout>
 
 </LinearLayout>

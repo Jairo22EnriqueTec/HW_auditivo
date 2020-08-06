@@ -1,5 +1,6 @@
 package org.helloworld.auditivo;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -87,6 +88,8 @@ fragmentseleccionado=true;
             fragmentseleccionado=true;
         } else if (id == R.id.nav_share) {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, Formulario_Datos_Usuario.class));
+            fragmentseleccionado=true;
         } else if (id == R.id.nav_send) {
             Toast.makeText(this, "Cerrar Secion", Toast.LENGTH_SHORT).show();
         }

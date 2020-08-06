@@ -51,10 +51,10 @@ import retrofit2.Callback;
 
 
 public class Formulario_Datos_Usuario extends AppCompatActivity {
-    EditText edit1, edit22, edit3;
-    TextView edit2;
+    EditText NombreUsuario, TelefonoUsuario;
+    TextView EditCalendario;
     //FloatingActionButton fl;
-   CircleButton fl;
+   CircleButton BtnCalendar;
    Button button;
     Calendar cal;
     int dia, mes, año;
@@ -71,20 +71,24 @@ ProgressDialog progressDialog;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_datos_usuario);
+        TelefonoUsuario=findViewById(R.id.TelefonoUsuario);
+        NombreUsuario=findViewById(R.id.NombreUsuario);
+        EditCalendario=findViewById(R.id.EditCalendario);
+        BtnCalendar=findViewById(R.id.BtnCalendar);
         cal=Calendar.getInstance();
-        //button=findViewById(R.id.button);
+        button=findViewById(R.id.button);
         dia=cal.get(Calendar.DAY_OF_MONTH);
         mes=cal.get(Calendar.MONTH);
         año=cal.get(Calendar.YEAR);
         requestQueue= Volley.newRequestQueue(this);
-fl.setOnClickListener(new View.OnClickListener() {
+        BtnCalendar.setOnClickListener(new View.OnClickListener() {
     @SuppressLint("ResourceType")
     @Override
     public void onClick(View view) {
         DatePickerDialog datePickerDialog=new DatePickerDialog(Formulario_Datos_Usuario.this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-edit2.setText(i2+"/"+(i1+1)+"/"+i);
+EditCalendario.setText(i2+"/"+(i1+1)+"/"+i);
             }
         },año,mes,dia);
         datePickerDialog.show();
@@ -94,11 +98,11 @@ edit2.setText(i2+"/"+(i1+1)+"/"+i);
     }
         public void inicio (View view) {
             try{
-             l = edit1.getText().toString();
-             ll = edit2.getText().toString();
-             numero=edit22.getText().toString();
-             frase=edit3.getText().toString();
-            if (l.length() > 0 && ll.length() > 0 && numero.length()>0 && frase.length()>0) {
+             l = NombreUsuario.getText().toString();
+             ll = EditCalendario.getText().toString();
+             numero=TelefonoUsuario.getText().toString();
+             frase="";
+            if (l.length() > 0 && ll.length() > 0 && numero.length()>0) {
                 try {
 
                     String dele="DELETE FROM Usuario";
