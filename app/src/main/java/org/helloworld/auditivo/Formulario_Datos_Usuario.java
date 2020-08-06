@@ -71,13 +71,8 @@ ProgressDialog progressDialog;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_datos_usuario);
-        edit22=findViewById(R.id.editText3);
-        edit3=findViewById(R.id.editText5);
-        edit1=findViewById(R.id.editText);
-        edit2=findViewById(R.id.editText2);
-        fl=findViewById(R.id.floatt2);
         cal=Calendar.getInstance();
-        button=findViewById(R.id.button);
+        //button=findViewById(R.id.button);
         dia=cal.get(Calendar.DAY_OF_MONTH);
         mes=cal.get(Calendar.MONTH);
         año=cal.get(Calendar.YEAR);

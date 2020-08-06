@@ -13,88 +13,98 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            >
+
             <LinearLayout
-                android:gravity="center"
-                android:layout_marginRight="80dp"
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="80dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Normas"
-                    />
+                    android:text="Normas" />
+
                 <ImageButton
                     android:id="@+id/imageButton4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/normas"
                     android:background="@drawable/boton_duolingo"
-                    />
+                    android:src="@drawable/normas" />
+
                 <ProgressBar
                     android:id="@+id/progressBar1"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                    android:progressBackgroundTint="@color/colorPrimary"
                     android:max="5"
-                    />
+                    android:progressBackgroundTint="@color/colorPrimary" />
+
             </LinearLayout>
+
             <LinearLayout
-                android:gravity="center"
-                android:layout_marginRight="80dp"
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginRight="80dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dias de la semana"
-                    />
+                    android:text="Dias" />
+
                 <ImageButton
                     android:id="@+id/imageButton9"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/diaduo"
                     android:background="@drawable/boton_duolingo"
-                    />
+                    android:src="@drawable/diaduo" />
+
                 <ProgressBar
                     android:id="@+id/progressBar2"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                    android:max="5"
-                    />
+                    android:max="5" />
+
             </LinearLayout>
+
             <LinearLayout
-                android:gravity="center"
-                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Meses"
-                    />
+                    android:text="Meses" />
+
                 <ImageButton
                     android:id="@+id/imageButton10"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/nombramiento"
                     android:background="@drawable/boton_duolingo"
-                    />
+                    android:src="@drawable/nombramiento" />
+
                 <ProgressBar
                     android:id="@+id/progressBar3"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
-                    android:max="5"
-                    />
+                    android:max="5" />
+
             </LinearLayout>
+
         </LinearLayout>
         <LinearLayout
             android:layout_marginTop="50dp"

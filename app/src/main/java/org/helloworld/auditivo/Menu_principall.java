@@ -71,13 +71,14 @@ public class Menu_principall extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment=null;
-        boolean fragmentseleccionado=false;
-
+        boolean fragmentseleccionado=true;
+        fragment=new Traductorr();
         if (id == R.id.nav_camera) {
-            fragment=new Traductorr();
+            fragment=new BlankFragment();
             fragmentseleccionado=true;
         } else if (id == R.id.nav_gallery) {
-
+fragment=new Pictogramas();
+fragmentseleccionado=true;
         } else if (id == R.id.nav_slideshow) {
             fragment=new Audio_Texto();
             fragmentseleccionado=true;

@@ -6,16 +6,16 @@
 
         <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="20dp"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="15dp"
 
             >
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="70dp"
                 android:src="@color/jj"
                 android:id="@+id/fondoti"
                 />
@@ -36,7 +36,7 @@
                         android:layout_height="match_parent"
                         android:text="Titulo"
                         android:textColor="@color/beish"
-                        android:textSize="30dp"
+                        android:textSize="25dp"
                         android:textStyle="bold"
                         android:layout_marginLeft="8dp"
                         android:id="@+id/titulo"
@@ -45,8 +45,8 @@
 
                     <ImageView
                         android:id="@+id/imagenh"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
                         android:layout_gravity="end"
                         android:layout_marginLeft="40dp"
                         android:src="@drawable/cassa"

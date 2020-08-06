@@ -29,12 +29,12 @@
       android:layout_height="135dp"
       android:layout_below="@id/linearLayout"
       android:orientation="horizontal"
-android:layout_marginTop="50dp"
+
 
       >
-      <TextView
+      <EditText
           android:id="@+id/txtTraducir"
-          android:layout_width="270dp"
+          android:layout_width="260dp"
           android:layout_height="134dp"
           android:text="Escribe..."
           android:textSize="20dp"
@@ -51,7 +51,7 @@ android:layout_marginTop="50dp"
           android:id="@+id/btnLimpiar"
           android:background="@color/blanco"
           android:src="@drawable/limpiar_t"
-          android:layout_marginLeft="55dp"
+          android:layout_marginLeft="50dp"
           />
     <Button
         android:id="@+id/btnTraducir"
@@ -79,7 +79,7 @@ android:background="@drawable/boton_aceotar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            android:src="@drawable/foto_t"
+            android:src="@drawable/ic_action_camera"
 
             />
 
@@ -91,18 +91,18 @@ android:background="@drawable/boton_aceotar"
             android:layout_marginRight="80dp"
             android:layout_marginLeft="80dp"
 
-            android:src="@drawable/microfono_t" />
+            android:src="@drawable/ic_action_hear" />
 
         <ImageButton
             android:id="@+id/btnPausePlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/blanco"
-            android:src="@drawable/espalda" />
+            android:src="@drawable/ic_action_back" />
     </LinearLayout>
     <TextView
         android:id="@+id/txtProgreso"
-        android:layout_width="150dp"
+        android:layout_width="190dp"
         android:layout_height="50dp"
         android:layout_alignBottom="@+id/linearLayout"
         android:layout_centerHorizontal="true"

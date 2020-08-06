@@ -66,7 +66,7 @@ public class Ventana_Teclado_Voz_Senas extends Fragment {
             @Override
             public void onClick(View v) {
                 texto+=lists.get(recyclerViewww.getChildAdapterPosition(v)).getText()+" ";
-                Teclado_senas_voz.textView.setText(""+texto);
+                Pictogramas.textView.setText(""+texto);
             }
         });
         return view;
