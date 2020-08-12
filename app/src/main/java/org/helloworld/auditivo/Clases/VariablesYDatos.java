@@ -865,6 +865,7 @@ public class VariablesYDatos {
             };
     public static int imagcasa[]=
             {
+                    R.drawable.gracias,
                     R.drawable.mama_d,
                     R.drawable.novio_d,
                     R.drawable.tiempo,
@@ -905,6 +906,7 @@ public class VariablesYDatos {
                     R.drawable.ventana
             };
     public static  String txtcasa[]={
+            "Gracias",
             "Mamá",
             "Novio",
             "Tiempo",

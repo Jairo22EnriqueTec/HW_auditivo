@@ -74,7 +74,7 @@ public class Ventana_Cursos_Ejer_Selec_Txt extends AppCompatActivity {
         Settear();
     }
     private void Settear() {
-        if (Menu_Quiz.ventana.equalsIgnoreCase("1")){
+        if (Cursos_F.ventana.equalsIgnoreCase("1")){
             bloquecito=getIntent().getIntExtra("bloquecito",0);
             txtPregunta.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][4].toString());
             txtOpcion1.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][0].toString());
@@ -84,7 +84,7 @@ public class Ventana_Cursos_Ejer_Selec_Txt extends AppCompatActivity {
             txtTema.setText("Tema: "+VariablesYDatos.DuolingoNombres[bloquecito]);
             IMGgif.setImageResource((int)(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][6]));
         }
-        if(Menu_Quiz.ventana.equalsIgnoreCase("2")){
+        if(Cursos_F.ventana.equalsIgnoreCase("2")){
             bloquecito=getIntent().getIntExtra("bloquecito",1);
             txtPregunta.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][4].toString());
             txtOpcion1.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][0].toString());
@@ -94,7 +94,7 @@ public class Ventana_Cursos_Ejer_Selec_Txt extends AppCompatActivity {
             txtTema.setText("Tema: "+VariablesYDatos.DuolingoNombres[bloquecito]);
             IMGgif.setImageResource((int)(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][6]));
         }
-        if(Menu_Quiz.ventana.equalsIgnoreCase("3")){
+        if(Cursos_F.ventana.equalsIgnoreCase("3")){
             bloquecito=getIntent().getIntExtra("bloquecito",2);
             txtPregunta.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][4].toString());
             txtOpcion1.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][0].toString());
@@ -104,7 +104,7 @@ public class Ventana_Cursos_Ejer_Selec_Txt extends AppCompatActivity {
             txtTema.setText("Tema: "+VariablesYDatos.DuolingoNombres[bloquecito]);
             IMGgif.setImageResource((int)(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][6]));
         }
-        if(Menu_Quiz.ventana.equalsIgnoreCase("4")){
+        if(Cursos_F.ventana.equalsIgnoreCase("4")){
             bloquecito=getIntent().getIntExtra("bloquecito",3);
             txtPregunta.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][4].toString());
             txtOpcion1.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][0].toString());
@@ -114,7 +114,7 @@ public class Ventana_Cursos_Ejer_Selec_Txt extends AppCompatActivity {
             txtTema.setText("Tema: "+VariablesYDatos.DuolingoNombres[bloquecito]);
             IMGgif.setImageResource((int)(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][6]));
         }
-        if(Menu_Quiz.ventana.equalsIgnoreCase("5")){
+        if(Cursos_F.ventana.equalsIgnoreCase("5")){
             bloquecito=getIntent().getIntExtra("bloquecito",4);
             txtPregunta.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][4].toString());
             txtOpcion1.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][0].toString());
@@ -124,7 +124,7 @@ public class Ventana_Cursos_Ejer_Selec_Txt extends AppCompatActivity {
             txtTema.setText("Tema: "+VariablesYDatos.DuolingoNombres[bloquecito]);
             IMGgif.setImageResource((int)(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][6]));
         }
-        if(Menu_Quiz.ventana.equalsIgnoreCase("6")){
+        if(Cursos_F.ventana.equalsIgnoreCase("6")){
             bloquecito=getIntent().getIntExtra("bloquecito",5);
             txtPregunta.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][4].toString());
             txtOpcion1.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][0].toString());
@@ -134,7 +134,7 @@ public class Ventana_Cursos_Ejer_Selec_Txt extends AppCompatActivity {
             txtTema.setText("Tema: "+VariablesYDatos.DuolingoNombres[bloquecito]);
             IMGgif.setImageResource((int)(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][6]));
         }
-        if(Menu_Quiz.ventana.equalsIgnoreCase("7")){
+        if(Cursos_F.ventana.equalsIgnoreCase("7")){
             bloquecito=getIntent().getIntExtra("bloquecito",6);
             txtPregunta.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][4].toString());
             txtOpcion1.setText(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][0].toString());

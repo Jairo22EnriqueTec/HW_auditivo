@@ -1,11 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.helloworld.auditivo.Pictogramas"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/blanco"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+               android:layout_weight="1"
+                android:layout_height="match_parent"
+
+                >
+                <RelativeLayout
+                    android:id="@+id/conten"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="1dp">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycleropciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                    <FrameLayout
+                        android:layout_below="@+id/recycleropciones"
+                        android:id="@+id/fragmm"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/blanco"
+                        ></FrameLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:orientation="horizontal"
+                android:layout_weight="0.80"
+                android:weightSum="1"
+                android:layout_height="wrap_content"
+                >
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="bottom"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="2dp"
+                    app:cardBackgroundColor="@color/colorazul"
+                    android:layout_height="55dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/texttt"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:hint="Texto..."
+                        android:textSize="20dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:textColor="@color/blanco"
+                        android:textColorHint="@color/blanco"
+                        ></TextView>
+
+                </android.support.v7.widget.CardView>
+                <android.support.design.widget.FloatingActionButton
+                    app:backgroundTint="@color/colorazul"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_action_talk"
+                    android:layout_gravity="bottom"
+                    app:fab_size="normal"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/hablar"
+                    ></android.support.design.widget.FloatingActionButton>
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_back"
+                    app:backgroundTint="@color/colorazul"
+                    android:id="@+id/borrar"
+                    >
+
+                </android.support.design.widget.FloatingActionButton>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+<!--
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="org.helloworld.auditivo.Pictogramas">
-
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -93,3 +196,4 @@
 
         </LinearLayout>
 </RelativeLayout>
+-->
