@@ -51,30 +51,34 @@
                             app:cardCornerRadius="25dp"
                             android:layout_marginBottom="5dp"
                             android:layout_marginLeft="2dp"
-                            app:cardBackgroundColor="@color/colorazul"
+                            app:cardBackgroundColor="@color/colorPrimary"
                             android:layout_height="55dp">
                             <SearchView
                                 android:layout_width="match_parent"
                                 android:layout_height="55dp"
                                 android:id="@+id/searchview"
                                 android:layout_gravity="bottom"
-                                android:searchIcon="@drawable/ic_action_talk"
-                                android:searchHintIcon="@drawable/ic_action_talk"
-                                android:goIcon="@drawable/ic_action_talk"
-                                android:commitIcon="@drawable/ic_action_talk"
-                                android:voiceIcon="@drawable/ic_action_talk"
+                                android:searchIcon="@drawable/talk"
+                                android:searchHintIcon="@drawable/talk"
+                                android:goIcon="@drawable/talk"
+                                android:commitIcon="@drawable/talk"
+                                android:voiceIcon="@drawable/talk"
                                 android:imeOptions="actionSend"
-                                android:queryHint="Responder" />
+                                android:queryHint="Responder"
+
+
+
+                                />
                         </android.support.v7.widget.CardView>
 
                 <android.support.design.widget.FloatingActionButton
-                    app:backgroundTint="@color/colorazul"
+                    app:backgroundTint="@color/colorPrimary"
                     android:id="@+id/btnOir"
                     android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/ic_action_hear"
+                    app:srcCompat="@drawable/hearing"
                     android:layout_gravity="bottom"
                     app:fab_size="normal" />
 
@@ -123,7 +127,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/Estado_escucha"
             android:text="Escuchando..."
-            android:textColor="@color/colorazul"
+            android:textColor="@color/colorPrimary"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_alignParentBottom="true"
@@ -149,8 +153,8 @@ Temporal change
             android:id="@+id/btnEliminarconversacion"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_action_guardar"
-            app:backgroundTint="@color/colorazul"
+            app:srcCompat="@drawable/delete_forever"
+            app:backgroundTint="@color/colorPrimary"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="220dp"

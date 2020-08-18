@@ -1,3 +1,201 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="org.helloworld.auditivo.Traductorr"
+    android:background="@color/hueso"
+    android:orientation="vertical"
+android:gravity="center"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel1"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_height="wrap_content"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.50"
+                android:layout_height="match_parent"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+                    android:layout_marginTop="-20dp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="350dp"
+                        android:layout_height="320dp"
+                        android:src="@drawable/hola"
+                        android:id="@+id/gif"
+                        ></pl.droidsonroids.gif.GifImageView>
+                    <TextView
+                        android:id="@+id/txtProgreso"
+                        android:layout_width="190dp"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:background="@drawable/fondo1"
+                        android:layout_marginTop="-60dp"
+                        android:text="Hola!"
+                        android:textColor="@color/blanco"
+                        android:textSize="30dp"
+                        android:layout_gravity="center"
+                        >
+
+                    </TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_weight="0.50"
+    android:weightSum="1"
+    android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+    >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_weight="1.1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/colorPrimary"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="0.7"
+                android:hint="Escribe..."
+                android:textColor="@color/blanco"
+                android:textColorHint="@color/blanco"
+                android:textSize="20dp"
+                android:gravity="start"
+                android:id="@+id/txtTraducir"
+                >
+
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                   app:srcCompat="@drawable/delete"
+android:layout_gravity="right"
+                    android:layout_marginTop="-6dp"
+                    android:id="@+id/btnLimpiar"
+                    >
+
+                </ImageButton>
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Aceptar"
+                   android:background="@drawable/boton_t"
+                   android:textColor="@color/colorPrimary"
+                   android:layout_marginTop="50dp"
+                   android:layout_gravity="right"
+                   android:id="@+id/btnTraducir"
+                   >
+
+               </Button>
+        </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+      android:layout_marginTop="15dp"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <ImageButton
+                    android:id="@+id/btncameratraducir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dp"
+                    android:backgroundTint="@color/blanco"
+                    app:srcCompat="@drawable/c_traductor">
+
+                </ImageButton>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/m_traductor"
+                    android:backgroundTint="@color/blanco"
+                    android:id="@+id/btnmicrotraducir"
+                    ></ImageButton>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco"
+            app:srcCompat="@drawable/f_traductor"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/btnPausePlay"
+            ></ImageButton>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>
+
+
+<!--
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +205,7 @@
     >
 
 
-    <!-- TODO: Update blank fragment layout -->
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -114,3 +312,4 @@ android:background="@drawable/boton_aceotar"
         android:textSize="25dp"
         android:textStyle="bold" />
 </RelativeLayout>
+-->
