@@ -370,9 +370,8 @@ public class Audio_Texto extends Fragment {
         btnEliminarConversa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Se ha guardado la conversación!", Toast.LENGTH_SHORT ).show();
-                //VariablesYDatos.Conversacion.clear();
-                //cargarConversacion();
+                VariablesYDatos.Conversacion.clear();
+                cargarConversacion();
             }
         });
 //
@@ -727,6 +726,7 @@ public class Audio_Texto extends Fragment {
         while (cursor.moveToNext()){
             lista_palabras.add(new Classes(cursor.getString(0)));
         }
+
         lista_palabras.add(new Classes("Mi nombre es: "+NombreUsuario));
         lista_palabras.add(new Classes("Agregar +"));
     }

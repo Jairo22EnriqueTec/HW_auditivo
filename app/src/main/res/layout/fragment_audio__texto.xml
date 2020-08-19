@@ -24,6 +24,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="1dp"
+
                     >
 
                     <android.support.v7.widget.RecyclerView
@@ -51,34 +52,30 @@
                             app:cardCornerRadius="25dp"
                             android:layout_marginBottom="5dp"
                             android:layout_marginLeft="2dp"
-                            app:cardBackgroundColor="@color/colorPrimary"
+                            app:cardBackgroundColor="@color/colorazul"
                             android:layout_height="55dp">
                             <SearchView
                                 android:layout_width="match_parent"
                                 android:layout_height="55dp"
                                 android:id="@+id/searchview"
                                 android:layout_gravity="bottom"
-                                android:searchIcon="@drawable/talk"
-                                android:searchHintIcon="@drawable/talk"
-                                android:goIcon="@drawable/talk"
-                                android:commitIcon="@drawable/talk"
-                                android:voiceIcon="@drawable/talk"
+                                android:searchIcon="@drawable/ic_action_talk"
+                                android:searchHintIcon="@drawable/ic_action_talk"
+                                android:goIcon="@drawable/ic_action_talk"
+                                android:commitIcon="@drawable/ic_action_talk"
+                                android:voiceIcon="@drawable/ic_action_talk"
                                 android:imeOptions="actionSend"
-                                android:queryHint="Responder"
-
-
-
-                                />
+                                android:queryHint="Responder" />
                         </android.support.v7.widget.CardView>
 
                 <android.support.design.widget.FloatingActionButton
-                    app:backgroundTint="@color/colorPrimary"
+                    app:backgroundTint="@color/colorazul"
                     android:id="@+id/btnOir"
                     android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginBottom="5dp"
-                    app:srcCompat="@drawable/hearing"
+                    android:src="@drawable/ic_action_hear"
                     android:layout_gravity="bottom"
                     app:fab_size="normal" />
 
@@ -127,7 +124,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/Estado_escucha"
             android:text="Escuchando..."
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorazul"
             android:textSize="18dp"
             android:textStyle="bold"
             android:layout_alignParentBottom="true"
@@ -153,8 +150,8 @@ Temporal change
             android:id="@+id/btnEliminarconversacion"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/delete_forever"
-            app:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_action_tache"
+            app:backgroundTint="@color/colorazul"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="220dp"
