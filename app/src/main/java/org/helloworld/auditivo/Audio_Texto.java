@@ -133,7 +133,7 @@ public class Audio_Texto extends Fragment {
         //
         Datos_Usuario conex=new Datos_Usuario(getActivity(),"DBUsuario",null,2);
         SQLiteDatabase db=conex.getReadableDatabase();
-        Cursor cursor=db.rawQuery("SELECT Nombre FROM Usuario",null);
+        Cursor cursor=db.rawQuery("SELECT Nombre FROM Perfil",null);
         try{
             if(cursor.moveToFirst()){
                 NombreUsuario=cursor.getString(0);

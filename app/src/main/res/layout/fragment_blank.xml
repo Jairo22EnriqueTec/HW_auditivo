@@ -1,121 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlankFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/hueso"
+    android:orientation="vertical"
+    android:gravity="center"
     >
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/linearLayout"
-        android:orientation="vertical"
+        android:id="@+id/rel1"
 
         >
-        <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/gif"
-            android:layout_width="350dp"
-            android:layout_height="328dp"
-            android:src="@drawable/hola"
-            android:layout_gravity="center"
-
-            />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="135dp"
-        android:layout_below="@id/linearLayout"
-        android:orientation="horizontal"
-android:background="@drawable/fondo_texto_traductor"
-
-        >
-
-        <EditText
-            android:id="@+id/txtTraducirr"
-            android:layout_width="270dp"
-            android:layout_height="134dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/fondo_texto_traductor"
-            android:hint="Escribe..."
-            android:textSize="20dp" />
-
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             android:orientation="vertical"
-            >
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnLimpiar"
-                android:background="@color/blanco"
-                android:src="@drawable/limpiar_t"
-                android:layout_marginLeft="55dp"
-                />
-            <Button
-                android:id="@+id/btnTraducir"
-                android:layout_marginTop="43dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Aceptar"
-                android:background="@drawable/boton_aceotar"
-                android:textColor="@color/white"
+            android:weightSum="1"
+            android:layout_height="wrap_content"
 
-                />
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.50"
+                android:layout_height="match_parent"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="center"
+
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_width="350dp"
+                            android:layout_height="320dp"
+                            android:src="@drawable/hola"
+                            android:id="@+id/gif"
+                            ></pl.droidsonroids.gif.GifImageView>
+                        <TextView
+                            android:id="@+id/txtProgreso"
+                            android:layout_width="190dp"
+                            android:layout_height="50dp"
+                            android:gravity="center"
+                            android:background="@drawable/fondo1"
+                            android:layout_marginTop="-60dp"
+                            android:text="Hola!"
+                            android:textColor="@color/blanco"
+                            android:textSize="30dp"
+                            android:layout_gravity="center"
+                            >
+
+                        </TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.50"
+                android:weightSum="1"
+                android:layout_height="match_parent"
+                android:layout_marginTop="9dp"
+                >
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1.1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.7"
+                            android:hint="Escribe..."
+                            android:textColor="@color/blanco"
+                            android:textColorHint="@color/blanco"
+                            android:textSize="20dp"
+                            android:gravity="start"
+                            android:id="@+id/txtTraducir"
+                            >
+
+                        </EditText>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1.3"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/colorPrimary"
+                                app:srcCompat="@drawable/delete"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="-6dp"
+                                android:id="@+id/btnLimpiar"
+                                >
+
+                            </ImageButton>
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Aceptar"
+                                android:background="@drawable/boton_t"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_marginTop="50dp"
+                                android:layout_gravity="right"
+                                android:id="@+id/btnTraducir"
+                                >
+
+                            </Button>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-android:background="@drawable/fondo_texto_traductor"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/linearLayout3">
-
-        <ImageButton
-            android:id="@+id/btncameratraducir"
-            android:layout_width="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/ic_action_camera"
+            app:cardCornerRadius="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
 
-            />
+                <ImageButton
+                    android:id="@+id/btncameratraducir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dp"
+                    android:backgroundTint="@color/blanco"
+                    app:srcCompat="@drawable/c_traductor">
 
-        <ImageButton
-            android:id="@+id/btnmicrotraducir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/blanco"
-            android:layout_marginRight="80dp"
-            android:layout_marginLeft="80dp"
+                </ImageButton>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/m_traductor"
+                    android:backgroundTint="@color/blanco"
+                    android:id="@+id/btnmicrotraducir"
+                    ></ImageButton>
 
-            android:src="@drawable/ic_action_hear" />
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blanco"
+                    app:srcCompat="@drawable/f_traductor"
+                    android:layout_marginLeft="80dp"
+                    android:id="@+id/btnPausePlay"
+                    ></ImageButton>
 
-        <ImageButton
-            android:id="@+id/btnPausePlay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/blanco"
-            android:src="@drawable/ic_action_back" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
-    <TextView
-        android:id="@+id/txtProgreso"
-        android:layout_width="165dp"
-        android:layout_height="50dp"
-        android:layout_alignBottom="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="13dp"
-        android:background="@drawable/fondo1"
-        android:gravity="center"
-        android:text="¡Hola!"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        android:textStyle="bold" />
 
-</RelativeLayout>
+</LinearLayout>

@@ -10,8 +10,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Datos_Usuario extends SQLiteOpenHelper {
     String tabla="CREATE TABLE Usuario(Nombre TEXT, Nacimiento TEXT,Discapacidad TEXT,Numero TEXT,Frase TEXT)";
+
     String Palabras_rapidas="CREATE TABLE PalabrasR (Frase TEXT)";
     String Primera_vez_en="CREATE TABLE Primeravezen (Auditivo TEXT,Comunicativo TEXT,Visual TEXT)";
+    String tabla_usuario="CREATE TABLE Perfil(Nombre TEXT, Nacimiento TEXT,Numero TEXT,Frase TEXT,Correo TEXT,Password TEXT)";
+
     public Datos_Usuario(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -21,6 +24,7 @@ public class Datos_Usuario extends SQLiteOpenHelper {
         db.execSQL(tabla);
         db.execSQL(Palabras_rapidas);
         db.execSQL(Primera_vez_en);
+        db.execSQL(tabla_usuario);
     }
 
     @Override

@@ -51,7 +51,7 @@ import retrofit2.Callback;
 
 
 public class Formulario_Datos_Usuario extends AppCompatActivity {
-    EditText NombreUsuario, TelefonoUsuario;
+    EditText NombreUsuario, TelefonoUsuario,correo,contrasena,apellidos;
     TextView EditCalendario;
     //FloatingActionButton fl;
    CircleButton BtnCalendar;
@@ -62,7 +62,7 @@ public class Formulario_Datos_Usuario extends AppCompatActivity {
     JsonObjectRequest jsonObjectRequest;
 ProgressDialog progressDialog;
     String l;
-    String ll;
+    String ll,correo_r,contra_r;
     String numero;
     String frase;
     StringRequest stringRequest;
@@ -75,6 +75,9 @@ ProgressDialog progressDialog;
         NombreUsuario=findViewById(R.id.NombreUsuario);
         EditCalendario=findViewById(R.id.EditCalendario);
         BtnCalendar=findViewById(R.id.BtnCalendar);
+        correo=findViewById(R.id.correo);
+        apellidos=findViewById(R.id.apellido);
+        contrasena=findViewById(R.id.contrasena);
         cal=Calendar.getInstance();
         button=findViewById(R.id.button);
         dia=cal.get(Calendar.DAY_OF_MONTH);
@@ -98,28 +101,31 @@ EditCalendario.setText(i2+"/"+(i1+1)+"/"+i);
     }
         public void inicio (View view) {
             try{
-             l = NombreUsuario.getText().toString();
+             l = NombreUsuario.getText().toString()+" "+apellidos.getText().toString();
              ll = EditCalendario.getText().toString();
              numero=TelefonoUsuario.getText().toString();
              frase="";
+             correo_r=correo.getText().toString();
+             contra_r=contrasena.getText().toString();
             if (l.length() > 0 && ll.length() > 0 && numero.length()>0) {
                 try {
 
-                    String dele="DELETE FROM Usuario";
+                   // String dele="DELETE FROM Usuario";
 
                     SQLiteDatabase db = new Datos_Usuario(this, "DBUsuario", null, 2).getWritableDatabase();
-                    db.execSQL(dele);
-                    db.execSQL("INSERT INTO Usuario (Discapacidad, Nombre, Nacimiento, Numero, Frase)VALUES('audicomu','" + l + "','" + ll + "','"+numero+"','"+frase+"')");
+                    //db.execSQL(dele);
+                    db.execSQL("INSERT INTO Perfil (Nombre, Nacimiento, Numero, Frase,Correo,Password)VALUES("+l+"','"+ll+"','"+numero+"','"+frase+"','"+correo_r+"','"+contra_r+"')");
+
                     //Subir al servidor
 //cargarweb();
                     ClaseConection claseConection=new ClaseConection();
-                   String response= claseConection.execute("https://helloworldapp.000webhostapp.com/Registro.php?nombre="+l+"&fecha_nacimiento="+ll+"&telefono="+numero+"&frase="+frase+"").get();
+                   String response= claseConection.execute("https://helloworldapp.000webhostapp.com/Registro.php?nombre="+l+"&fecha_nacimiento="+ll+"&telefono="+numero+"&frase="+frase+"&correo"+correo_r+"&passwordd"+contra_r+"").get();
                     progressDialog=new ProgressDialog(this);
                     progressDialog.setMessage("Cargando...");
                     progressDialog.show();
 if(response!=null){
     progressDialog.hide();
-    Toast.makeText(this, "Se ha registrado con exito", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "Se ha registrado con Exito", Toast.LENGTH_SHORT).show();
 
 
 }

@@ -19,7 +19,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -130,7 +129,7 @@ public class BlankFragment extends Fragment {
                 }
             }
         });
-        txtTraducir=view.findViewById(R.id.txtTraducirr);
+        txtTraducir=view.findViewById(R.id.txtTraducir);
         try{
             txtTraducir.setText(getActivity().getIntent().getStringExtra("tra"));
 

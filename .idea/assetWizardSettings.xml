@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="/private/var/folders/lp/7pqrhv490dqcs1td2s_kjm5w0000gn/T/baseline_delete_forever_24.xml" />
+                                                <entry key="imagePath" value="/private/var/folders/lp/7pqrhv490dqcs1td2s_kjm5w0000gn/T/baseline_email_24.xml" />
                                                 <entry key="opacityPercent" value="80" />
                                                 <entry key="paddingPercent" value="-5" />
                                               </map>
@@ -37,7 +37,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material/icons/materialicons/delete_forever/baseline_delete_forever_24.xml" />
+                                                <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material/icons/materialicons/email/baseline_email_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -81,9 +81,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="delete_forever" />
+                                      <entry key="outputName" value="email_usu" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="fdfdfd" />
+                                      <entry key="themeColor" value="000000" />
                                     </map>
                                   </option>
                                 </PersistentState>

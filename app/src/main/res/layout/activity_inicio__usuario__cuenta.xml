@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Inicio_Usuario_Cuenta"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido a Hello World!"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textColor="@color/HW_azul"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:cardElevation="25dp"
+        app:cardCornerRadius="110dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:src="@drawable/icono_hw_google_play_transparente"
+            />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicia Sesión!"
+        android:textSize="25dp"
+        android:layout_gravity="left"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        />
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="left"
+        android:src="@drawable/conector_lineal_azul"
+        android:rotation="180"
+        />
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/HW_azul"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="                      Correo"
+            android:ems="15"
+            android:drawablePadding="10dp"
+            android:inputType="textPersonName"
+            android:drawableLeft="@drawable/user"
+            android:textColorHint="@color/white"
+            android:background="@color/HW_azul"
+            android:layout_margin="8dp"
+android:id="@+id/correo_usu"
+            />
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/HW_naranja"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <EditText
+
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="                 Contraseña"
+            android:textColorHint="@color/white"
+            android:drawableLeft="@drawable/keyy"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center"
+            android:ems="15"
+            android:id="@+id/contrasena_usu"
+            android:inputType="phone"
+            android:background="@color/HW_naranja"
+            android:layout_margin="8dp"
+            />
+    </android.support.v7.widget.CardView>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="left"
+        android:src="@drawable/conector_lineal_azul"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boton_aceotar"
+        android:textColor="#fff"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Ingresar"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:textSize="20dp"
+android:id="@+id/ingresar"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes cuenta?"
+            android:textSize="18dp"
+           android:layout_marginRight="12dp"
+            ></TextView>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/boton_t"
+    android:layout_gravity="center"
+
+    android:textAllCaps="false"
+    android:padding="10dp"
+    android:textSize="20dp"
+    android:text="Registrate!"
+    android:textColor="@color/colorazul"
+    android:id="@+id/registrar"
+    >
+
+</Button>
+    </LinearLayout>
+</LinearLayout>

@@ -59,7 +59,7 @@
                     app:cardCornerRadius="25dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="2dp"
-                    app:cardBackgroundColor="@color/colorazul"
+                    app:cardBackgroundColor="@color/colorPrimary"
                     android:layout_height="55dp"
                     >
 
@@ -77,12 +77,12 @@
 
                 </android.support.v7.widget.CardView>
                 <android.support.design.widget.FloatingActionButton
-                    app:backgroundTint="@color/colorazul"
+                    app:backgroundTint="@color/colorPrimary"
                     android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_marginBottom="5dp"
-                    android:src="@drawable/ic_action_talk"
+                    android:src="@drawable/talk"
                     android:layout_gravity="bottom"
                     app:fab_size="normal"
                     android:layout_marginRight="5dp"
@@ -91,8 +91,8 @@
                 <android.support.design.widget.FloatingActionButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_action_back"
-                    app:backgroundTint="@color/colorazul"
+                    android:src="@drawable/delete"
+                    app:backgroundTint="@color/colorPrimary"
                     android:id="@+id/borrar"
                     >
 

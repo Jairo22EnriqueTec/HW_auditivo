@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.helloworld.auditivo.Datos_Usuario;
-import org.helloworld.auditivo.Inicio_Comunicativo;
 import org.helloworld.auditivo.R;
 
 import at.markushi.ui.CircleButton;

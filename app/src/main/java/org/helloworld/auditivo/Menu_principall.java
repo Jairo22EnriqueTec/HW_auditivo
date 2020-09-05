@@ -72,8 +72,7 @@ public class Menu_principall extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment=null;
-        boolean fragmentseleccionado=true;
-        fragment=new Traductorr();
+        boolean fragmentseleccionado=false;
         if (id == R.id.nav_camera) {
             fragment=new BlankFragment();
             fragmentseleccionado=true;

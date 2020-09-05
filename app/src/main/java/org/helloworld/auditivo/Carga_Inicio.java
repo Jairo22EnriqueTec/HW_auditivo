@@ -51,17 +51,17 @@ public class Carga_Inicio extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                String dele="DELETE FROM Usuario";
+                //String dele="DELETE FROM Usuario";
                 Datos_Usuario conex = new Datos_Usuario(getApplicationContext(), "DBUsuario", null, 2);
                 SQLiteDatabase db = conex.getReadableDatabase();
 
-                 db.execSQL(dele);
-                final Cursor cursor = db.rawQuery("SELECT Discapacidad FROM Usuario", null);
+                 //db.execSQL(dele);
+                final Cursor cursor = db.rawQuery("SELECT Correo FROM Perfil", null);
                 boolean sino=true;
                 while (cursor.moveToNext()) {
 
-                    if (cursor.getString(0).equals("audicomu")) {
-                        Intent inte = new Intent(Carga_Inicio.this, Inicio_Comunicativo.class);
+                    if (cursor.getString(0)!=null){
+                        Intent inte = new Intent(Carga_Inicio.this, Menu_principall.class);
                         EntrarDirecto=true;
                         startActivity(inte);
                         finish();

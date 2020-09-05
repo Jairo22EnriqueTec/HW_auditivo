@@ -15,7 +15,8 @@ import android.widget.VideoView;
 import org.helloworld.auditivo.Carga_Inicio;
 import org.helloworld.auditivo.Datos_Usuario;
 import org.helloworld.auditivo.Formulario_Datos_Usuario;
-import org.helloworld.auditivo.Inicio_Comunicativo;
+import org.helloworld.auditivo.Inicio_Usuario_Cuenta;
+import org.helloworld.auditivo.Menu_principall;
 import org.helloworld.auditivo.R;
 
 
@@ -44,9 +45,9 @@ public class Tutorial_primer_uso extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(Carga_Inicio.EntrarDirecto){
-                    startActivity(new Intent(Tutorial_primer_uso.this,Inicio_Comunicativo.class));
+                    startActivity(new Intent(Tutorial_primer_uso.this, Menu_principall.class));
                 }else {
-                    startActivity(new Intent(getApplication(), Formulario_Datos_Usuario.class));
+                    startActivity(new Intent(getApplication(), Inicio_Usuario_Cuenta.class));
                 }
             }
         });
@@ -66,7 +67,7 @@ public class Tutorial_primer_uso extends AppCompatActivity {
                     }
 
                     if(Carga_Inicio.EntrarDirecto){
-                     startActivity(new Intent(Tutorial_primer_uso.this,Inicio_Comunicativo.class));
+                     startActivity(new Intent(Tutorial_primer_uso.this,Menu_principall.class));
                     }else {
                         startActivity(new Intent(getApplication(), Formulario_Datos_Usuario.class));
                     }

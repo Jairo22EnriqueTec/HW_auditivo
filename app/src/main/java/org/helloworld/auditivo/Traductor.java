@@ -25,7 +25,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.view.WindowManager;
 
-import org.helloworld.auditivo.R;
 import org.helloworld.auditivo.Clases.VariablesYDatos;
 
 import java.util.ArrayList;

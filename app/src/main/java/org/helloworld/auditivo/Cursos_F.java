@@ -36,7 +36,7 @@ public class Cursos_F extends Fragment {
         imageButton5=view.findViewById(R.id.imageButton12);
         imageButton6=view.findViewById(R.id.imageButton13);
         imageButton7=view.findViewById(R.id.imageButton14);
-        filal=view.findViewById(R.id.imageButton3);
+        //filal=view.findViewById(R.id.imageButton3);
         progressBar=view.findViewById(R.id.progressBar1);
         progressBar2=view.findViewById(R.id.progressBar2);
         progressBar3=view.findViewById(R.id.progressBar3);

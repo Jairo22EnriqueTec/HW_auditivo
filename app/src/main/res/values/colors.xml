@@ -15,23 +15,15 @@
  limitations under the License.
 -->
 <resources>
-    <color name="control_background">#cc4285f4</color>
     <color name="blanco">#fdfdfdfd</color>
     <color name="colorPrimary">#FF5AB7FF</color>
     <color name="colorPrimaryDark">#367ff4</color>
-    <color name="colorAccent">#efebec</color>
     <color name="white">#FFF9F7F8</color>
     <color name="gris">#FF8F8E8E</color>
-    <color name="transparente">#80ffffff</color>
-    <color name="transparente2">#80060606</color>
-    <color name="negro">#d56fef</color>
     <color name="iconis">#c69b02</color>
     <color name="iconis2">#fad3aa</color>
-    <color name="naranja">#FFFA8729</color>
-    <color name="rojo">#FFCE4442</color>
+    <color name="rojo">#EE22F4</color>
     <color name="colorr">#f59778</color>
-    <color name="verde">#FF8CF530</color>
-    <color name="morado">#9e82ff</color>
     <color name="jj">#FFFFD182</color>
     <color name="amarillo">#fcdf3b</color>
     <color name="verde2">#abffc0</color>
@@ -40,16 +32,12 @@
     <color name="black">#000</color>
     <color name="jeje">#96cdf9</color>
     <color name="jje2">#00FFFFFF</color>
-    <color name="color">#e8edf2</color>
     <color name="beish">#8c4e01</color>
     <color name="colorazul">#1696f9</color>
-    <color name="ciolor">#c8e3f9</color>
     <color name="jf">#e6e4e4</color>
-    <color name="hueso">#E6E5E5</color>
+    <color name="hueso">#CFCECE</color>
     <color name="Aceptar">#1b6def</color>
     <color name="HW_azul">#3399FF</color>
-    <color name="HW_verde">#33FF66</color>
     <color name="HW_naranja">#FF9933</color>
     <color name="HW_rojo">#FF3333</color>
-    <color name="HW_amarilo">#FAED27</color>
 </resources>
