@@ -55,10 +55,6 @@ public class Adaptador_Card_Conversar extends RecyclerView.Adapter<Adaptador_Car
             e.printStackTrace();
         }
 
-    /*    View vista= LayoutInflater.from(parent.getContext()).inflate(R.layout.card_conversacion,parent,false);
-        RecyclerView.LayoutParams layoutParams=new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT);
-        vista.setLayoutParams(layoutParams);*/
 
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_conversacion,parent,false);
         final adaptadorHolder holder = new adaptadorHolder(v);
@@ -73,22 +69,7 @@ public class Adaptador_Card_Conversar extends RecyclerView.Adapter<Adaptador_Car
 holder.contenedor.setOnLongClickListener(new View.OnLongClickListener() {
     @Override
     public boolean onLongClick(View view) {
-/*
-        final CharSequence[] opciones={"Reproducir","Cancelar"};
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-        builder.setTitle("Seleccione");
-        builder.setIcon(R.drawable.ic_action_talk);
-        builder.setItems(opciones, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                if (opciones[i].equals("Reproducir")){
-                    toSpeech.speak(ListaElemen.get(holder.getAdapterPosition()).getMensaje(),TextToSpeech.QUEUE_FLUSH, null);
-                }
-            }
-        });
-        builder.show();
-*/
         return false;
     }
 });

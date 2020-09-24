@@ -52,16 +52,7 @@ public class Traductor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traductor);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
 
-            //If the draw over permission is not available open the settings screen
-            //to grant the permission.
-            Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                    Uri.parse("package:" + getPackageName()));
-            startActivityForResult(intent, CODE_DRAW_OVER_OTHER_APP_PERMISSION);
-        } else {
-            initializeView();
-        }*/
         lista=new ArrayList<>();
         swvelocidad = findViewById(R.id.swvelocidad);
         swvelocidad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -227,14 +218,7 @@ public class Traductor extends AppCompatActivity {
     }
 
     private void initializeView() {
-        findViewById(R.id.notify_me).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startService(new Intent(Traductor.this, FloatingViewService.class));
-                finish();
 
-            }
-        });
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

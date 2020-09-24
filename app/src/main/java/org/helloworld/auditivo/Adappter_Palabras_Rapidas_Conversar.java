@@ -12,8 +12,6 @@ import java.util.ArrayList;
 /**
  * Created by jairo enrique on 19/12/18.
  */
-// Comentario
-//WeSiFunciono
 public class Adappter_Palabras_Rapidas_Conversar extends RecyclerView.Adapter<Adappter_Palabras_Rapidas_Conversar.ViewHolder> implements View.OnClickListener, View.OnLongClickListener {
     private View.OnClickListener listener;
     private View.OnLongClickListener listenerLong;

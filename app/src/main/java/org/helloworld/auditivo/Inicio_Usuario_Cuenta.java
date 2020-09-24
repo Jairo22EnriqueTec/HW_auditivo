@@ -64,7 +64,7 @@ String response;
                String frase=jsonObject.getString("frase");
                String correo=jsonObject.getString("correo");
                String passwordd=jsonObject.getString("passwordd");
-                SQLiteDatabase db = new Datos_Usuario(this, "DBUsuario", null, 2).getWritableDatabase();
+                SQLiteDatabase db = new Datos_Usuario(this, "DBPerfil", null, 1).getWritableDatabase();
                 db.execSQL("INSERT INTO Perfil (Nombre, Nacimiento, Numero, Frase,Correo,Password)VALUES("+Nombre+"','"+fecha_nacimiento+"','"+telefono+"','"+frase+"','"+correo+"','"+passwordd+"')");
                 //--------------------
                 Intent intent=new Intent(Inicio_Usuario_Cuenta.this, Menu_principall.class);

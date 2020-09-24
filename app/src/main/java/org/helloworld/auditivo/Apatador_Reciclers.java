@@ -22,7 +22,4 @@ public int getImage(){return image;}
     public String getTexto() {
         return texto;
     }
-    //public void setLetra(String texto) {
-      //  this.texto= texto;
-//    }
 }

@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.helloworld.auditivo.R;
 import org.helloworld.auditivo.SQLite.Puntaje;
 
 public class Resultados_Duolingo extends AppCompatActivity {
@@ -37,11 +35,9 @@ public class Resultados_Duolingo extends AppCompatActivity {
         btnRegresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertar();
                 Ventana_Cursos_Ejer_Selec_Txt.aciertos=0;
                 Ventana_Cursos_Ejer_Selec_Sena.aciertos2=0;
-                //finish();
-                startActivity(new Intent(getApplicationContext(), Menu_Quiz.class));
+                startActivity(new Intent(getApplicationContext(), Menu_principall.class));
             }
         });
         setAciertos();
@@ -49,70 +45,12 @@ public class Resultados_Duolingo extends AppCompatActivity {
         Settear();
     }
 
-    private void insertar() {
-        switch (Menu_Quiz.ventana){
-            case "1":
-                Puntaje puntuacion=new Puntaje(this,"Puntaje",null,2);
-                SQLiteDatabase sqLiteDatabase=puntuacion.getWritableDatabase();
-                String guardar="INSERT INTO Puntaje(PuntuacionMax)VALUES('"+aciertos+"')";
-                sqLiteDatabase.execSQL(guardar);
-                Toast.makeText(this, "Se ha Registreado en 1", Toast.LENGTH_SHORT).show();
-                break;
-            case "2":
-                Puntaje puntuacion2=new Puntaje(this,"Puntaje",null,2);
-                SQLiteDatabase sqLiteDatabase2=puntuacion2.getWritableDatabase();
-                String guardar2="INSERT INTO Puntaje(PuntuacionMax2)VALUES('"+aciertos+"')";
-                sqLiteDatabase2.execSQL(guardar2);
-                Toast.makeText(this, "Se ha Registreado en 2", Toast.LENGTH_SHORT).show();
-                break;
-            case "3":
-                Puntaje puntuacion3=new Puntaje(this,"Puntaje",null,2);
-                SQLiteDatabase sqLiteDatabase3=puntuacion3.getWritableDatabase();
-                String guardar3="INSERT INTO Puntaje(PuntuacionMax3)VALUES('"+aciertos+"')";
-                sqLiteDatabase3.execSQL(guardar3);
-                Toast.makeText(this, "Se ha Registreado en 3", Toast.LENGTH_SHORT).show();
-                break;
-            case "4":
-                Puntaje puntuacion4=new Puntaje(this,"Puntaje",null,2);
-                SQLiteDatabase sqLiteDatabase4=puntuacion4.getWritableDatabase();
-                String guardar4="INSERT INTO Puntaje(PuntuacionMax4)VALUES('"+aciertos+"')";
-                sqLiteDatabase4.execSQL(guardar4);
-                Toast.makeText(this, "Se ha Registreado en 4", Toast.LENGTH_SHORT).show();
-                break;
-            case "5":
-                Puntaje puntuacion5=new Puntaje(this,"Puntaje",null,2);
-                SQLiteDatabase sqLiteDatabase5=puntuacion5.getWritableDatabase();
-                String guardar5="INSERT INTO Puntaje(PuntuacionMax5)VALUES('"+aciertos+"')";
-                sqLiteDatabase5.execSQL(guardar5);
-                Toast.makeText(this, "Se ha Registreado en 5", Toast.LENGTH_SHORT).show();
-                break;
-            case "6":
-                Puntaje puntuacion6=new Puntaje(this,"Puntaje",null,2);
-                SQLiteDatabase sqLiteDatabase6=puntuacion6.getWritableDatabase();
-                String guardar6="INSERT INTO Puntaje(PuntuacionMax6)VALUES('"+aciertos+"')";
-                sqLiteDatabase6.execSQL(guardar6);
-                Toast.makeText(this, "Se ha Registreado en 6", Toast.LENGTH_SHORT).show();
-                break;
-            case "7":
-                Puntaje puntuacion7=new Puntaje(this,"Puntaje",null,2);
-                SQLiteDatabase sqLiteDatabase7=puntuacion7.getWritableDatabase();
-                String guardar7="INSERT INTO Puntaje(PuntuacionMax7)VALUES('"+aciertos+"')";
-                sqLiteDatabase7.execSQL(guardar7);
-                Toast.makeText(this, "Se ha Registreado en 7", Toast.LENGTH_SHORT).show();
-                break;
-        }
-    }
+
     Cursor cursor;
     private void setAciertos(){
         aciertos= Ventana_Cursos_Ejer_Selec_Sena.aciertos2;
     }
     private void Settear(){
-        /*double rs=aciertos/total;
-        rs=rs*100;
-        txtRes.setText(rs+"%");
-        if(rs==0.0){
-            txtRes.setText(aciertos+"/"+total);
-        }*/
         txtRes.setText(aciertos+"/"+total);
         int imagen=0;
         String txt="";
@@ -135,6 +73,5 @@ public class Resultados_Duolingo extends AppCompatActivity {
         }
         img.setImageResource(imagen);
         txtRestxt.setText(""+txt);
-        //txtRestxt.append(txt);
     }
 }

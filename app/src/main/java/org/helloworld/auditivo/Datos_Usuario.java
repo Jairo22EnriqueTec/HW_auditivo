@@ -13,7 +13,7 @@ public class Datos_Usuario extends SQLiteOpenHelper {
 
     String Palabras_rapidas="CREATE TABLE PalabrasR (Frase TEXT)";
     String Primera_vez_en="CREATE TABLE Primeravezen (Auditivo TEXT,Comunicativo TEXT,Visual TEXT)";
-    String tabla_usuario="CREATE TABLE Perfil(Nombre TEXT, Nacimiento TEXT,Numero TEXT,Frase TEXT,Correo TEXT,Password TEXT)";
+    String tabla_usuario2="CREATE TABLE Perfil (Nombre TEXT, Nacimiento TEXT,Numero TEXT,Frase TEXT,Correo TEXT,Password TEXT)";
 
     public Datos_Usuario(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -24,7 +24,7 @@ public class Datos_Usuario extends SQLiteOpenHelper {
         db.execSQL(tabla);
         db.execSQL(Palabras_rapidas);
         db.execSQL(Primera_vez_en);
-        db.execSQL(tabla_usuario);
+        db.execSQL(tabla_usuario2);
     }
 
     @Override

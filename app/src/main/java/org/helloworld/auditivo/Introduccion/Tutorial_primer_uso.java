@@ -88,7 +88,6 @@ public class Tutorial_primer_uso extends AppCompatActivity {
         txtTitulo.setText(                      Tutorial_Primer_uso [0] [Num_apartado]+"");
         txtSubTitulo.setText(                   Tutorial_Primer_uso [1] [Num_columna]+"");
         txtDescripcion.setText(                  Tutorial_Primer_uso [2] [Num_columna]+"");
-       // gf.setImageResource(Integer.parseInt(Tutorial_Primer_uso [3] [Num_columna]+""));
         SettearVideo();
     }
     void SettearVideo(){

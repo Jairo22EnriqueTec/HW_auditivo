@@ -45,7 +45,6 @@ else{
     int ancho=0;
     LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(ancho,alto);
     holder.img.setLayoutParams(params);
-    //holder.img.setImageResource(R.drawable.camera);
 }
     }
 

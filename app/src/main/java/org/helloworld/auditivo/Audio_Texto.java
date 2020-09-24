@@ -91,7 +91,6 @@ public class Audio_Texto extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public Audio_Texto() {
-        // Required empty public constructor
     }
 
     /**
@@ -131,7 +130,7 @@ public class Audio_Texto extends Fragment {
         swalfa=view.findViewById(R.id.swalfabeta);
         Estado_escucha = view.findViewById(R.id.Estado_escucha);
         //
-        Datos_Usuario conex=new Datos_Usuario(getActivity(),"DBUsuario",null,2);
+        Datos_Usuario conex=new Datos_Usuario(getActivity(),"DBPerfil",null,1);
         SQLiteDatabase db=conex.getReadableDatabase();
         Cursor cursor=db.rawQuery("SELECT Nombre FROM Perfil",null);
         try{
@@ -159,7 +158,6 @@ public class Audio_Texto extends Fragment {
             @Override
             public boolean onLongClick(View v) {
                 final String P=lista_palabras.get(recyclerView_palabras.getChildAdapterPosition(v)).getTexto();
-                //Toast.makeText(getContext(),P,Toast.LENGTH_SHORT).show();
 
                 final CharSequence[] opciones={"Eliminar frase","Cancelar"};
                 final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
@@ -204,7 +202,7 @@ public class Audio_Texto extends Fragment {
         rv.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
 
-        //LinearLayoutManager llm = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+
         //y esto en el xml
         //android:scrollbars="horizontal"
         rv.setLayoutManager(llm);

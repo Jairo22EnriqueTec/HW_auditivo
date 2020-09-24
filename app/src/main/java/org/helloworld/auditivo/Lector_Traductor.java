@@ -49,7 +49,7 @@ public class Lector_Traductor extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 text=text.replace("\n"," ");
-                Intent i = new Intent(getApplicationContext(),Traductorr.class);
+                Intent i = new Intent(getApplicationContext(),BlankFragment.class);
                 i.putExtra("tra",text);
                 startActivity(i);
                 Log.i("AQUI",textView.getText().toString());

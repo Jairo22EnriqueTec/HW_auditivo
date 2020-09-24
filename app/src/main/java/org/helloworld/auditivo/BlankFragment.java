@@ -100,19 +100,6 @@ public class BlankFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_blank, container, false);
         lista=new ArrayList<>();
-       // swvelocidad = view.findViewById(R.id.swvelocidad);
-        /*swvelocidad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked){
-                    swvelocidad.setText("Rápido");
-                    milliseconds=1100;
-                }else{
-                    swvelocidad.setText("Lento");
-                    milliseconds=2500;
-                }
-            }
-        });*/
 
         txtProgreso=view.findViewById(R.id.txtProgreso);
         PlayPause=view.findViewById(R.id.btnPausePlay);

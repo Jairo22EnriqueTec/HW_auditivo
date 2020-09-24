@@ -38,10 +38,6 @@ public Adaptador_mostrar(List<Adaptador_Recyclerm>listacontenido){
     public void onBindViewHolder(@NonNull Adaptador_mostrar.ViewHolder holder, int position) {
 holder.txtcontent.setText(listacontenido.get(position).getContentestado().toString());
 holder.nomb.setText(listacontenido.get(position).getNombree().toString());
-//holder.imageButton.setText(listacontenido.get(position).getImagen());
-//holder.imageButton.setBackgroundResource(R.drawable.volumen);
-
-
     }
 
     @Override
@@ -56,41 +52,6 @@ ImageButton imageButton;
             super(itemView);
             nomb=itemView.findViewById(R.id.nombreusuario);
             txtcontent=itemView.findViewById(R.id.estadotext);
-            //imageButton=itemView.findViewById(R.id.escuchar);
-           /* imageButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String nombre="";
-                    TextToSpeech toSpeech = null;
-                    String Contenido =txtcontent.getText().toString();
-                    Log.i("Estado",Contenido);
-/*tts=new TextToSpeech(context, new TextToSpeech.OnInitListener() {
-    @Override
-    public void onInit(int status) {
-        if (status == TextToSpeech.SUCCESS) {
-            int result = tts.setLanguage(Locale.getDefault());
-
-        } else {
-           Log.i("rrrr","Feature not supported in your device");
-        }
-    }
-
-});*/
-                   /* Datos_Usuario conex=new Datos_Usuario(context,"DBUsuario",null,2);
-                    SQLiteDatabase db=conex.getReadableDatabase();
-                    Cursor cursor=db.rawQuery("SELECT Nombre FROM Usuario",null);
-                    try{
-                        if(cursor.moveToFirst()){
-                            nombre=cursor.getString(0);
-                        }
-                    }catch (Exception e){
-                        Log.i("Error Nombre","BD Nombre");
-                    }
-                    Bundle params=new Bundle();
-                    tts.speak("De "+nombre+" "+Contenido, TextToSpeech.QUEUE_FLUSH, null);*/
-              //  }
-            //});
-
         }
     }
 }

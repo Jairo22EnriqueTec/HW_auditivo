@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.helloworld.auditivo.Datos_Usuario;
+import org.helloworld.auditivo.Menu_principall;
 import org.helloworld.auditivo.R;
 
 import at.markushi.ui.CircleButton;
@@ -62,7 +63,7 @@ public class AM_Palabras_Rapidas extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(getApplicationContext(), Inicio_Comunicativo.class));
+        startActivity(new Intent(getApplicationContext(), Menu_principall.class));
     }
 }
 

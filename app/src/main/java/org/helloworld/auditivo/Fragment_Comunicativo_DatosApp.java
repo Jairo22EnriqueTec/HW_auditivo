@@ -26,7 +26,7 @@ public class Fragment_Comunicativo_DatosApp extends Fragment {
     TextView telJairo,telMigue,correoApp,correoMigue,correoJairo;
     Button btnCerrarSesion,btnvertutorial;
     public Fragment_Comunicativo_DatosApp() {
-        // Required empty public constructor
+
     }
 
 

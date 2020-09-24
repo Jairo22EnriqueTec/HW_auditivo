@@ -142,25 +142,25 @@ boolean SoloUno;
     }
 
     private void Cargar(){
-        if(Menu_Quiz.ventana.equalsIgnoreCase("1")){
+        if(Cursos_F.ventana.equalsIgnoreCase("1")){
             bloquecito=0;
         }
-        if (Menu_Quiz.ventana.equalsIgnoreCase("2")){
+        if (Cursos_F.ventana.equalsIgnoreCase("2")){
            bloquecito=1;
         }
-        if (Menu_Quiz.ventana.equalsIgnoreCase("3")){
+        if (Cursos_F.ventana.equalsIgnoreCase("3")){
             bloquecito=2;
         }
-        if (Menu_Quiz.ventana.equalsIgnoreCase("4")){
+        if (Cursos_F.ventana.equalsIgnoreCase("4")){
             bloquecito=3;
         }
-        if(Menu_Quiz.ventana.equalsIgnoreCase("5")){
+        if(Cursos_F.ventana.equalsIgnoreCase("5")){
             bloquecito=4;
         }
-        if (Menu_Quiz.ventana.equalsIgnoreCase("6")){
+        if (Cursos_F.ventana.equalsIgnoreCase("6")){
             bloquecito=5;
         }
-        if (Menu_Quiz.ventana.equalsIgnoreCase("7")){
+        if (Cursos_F.ventana.equalsIgnoreCase("7")){
             bloquecito=6;
         }
 imagen1.setImageResource((int)VariablesYDatos.Opciones_Duolingo2[bloquecito][filas][0]);
@@ -179,6 +179,6 @@ imagen2.setImageResource((int)VariablesYDatos.Opciones_Duolingo2[bloquecito][fil
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(this, Menu_Quiz.class));
+        startActivity(new Intent(this, Menu_principall.class));
     }
 }

@@ -52,7 +52,7 @@ public class Carga_Inicio extends AppCompatActivity {
             @Override
             public void run() {
                 //String dele="DELETE FROM Usuario";
-                Datos_Usuario conex = new Datos_Usuario(getApplicationContext(), "DBUsuario", null, 2);
+                Datos_Usuario conex = new Datos_Usuario(getApplicationContext(), "DBPerfil", null, 1);
                 SQLiteDatabase db = conex.getReadableDatabase();
 
                  //db.execSQL(dele);

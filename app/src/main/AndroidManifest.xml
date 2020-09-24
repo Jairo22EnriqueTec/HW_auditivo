@@ -12,6 +12,10 @@
         android:icon="@drawable/icono_hw_google_play_transparente"
         android:label="HW Auditivo"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
         <activity android:name=".Inicio_Usuario_Cuenta"></activity>
         <activity
             android:name=".Carga_Inicio"
@@ -29,13 +33,11 @@
         </activity>
         <activity android:name=".Videos" />
         <activity android:name=".Formulario_Datos_Usuario" />
-        <activity android:name=".Transicion_Dinosaurio" />
         <activity android:name=".Resultados_Duolingo" />
         <activity android:name=".Duolingo" />
         <activity android:name=".Ventana_Cursos_Ejer_Selec_Txt" />
         <activity android:name=".Ventana_Cursos_Ejer_Selec_Sena" />
         <activity android:name=".Lector_Traductor" />
-        <activity android:name=".Teclado_senas_voz" />
 
         <activity android:name="org.helloworld.tensorflowdemo.AM_Palabras_Rapidas" />
         <activity android:name=".Introduccion.Bienvenida" />
@@ -45,17 +47,12 @@
             android:name=".Menu_principall"
             android:label="@string/title_activity_menu_principal"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <service
-            android:name=".FloatingViewService"
-            android:enabled="true"
-            android:exported="false" />
     </application>
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -67,8 +64,6 @@
     <uses-permission android:name="android.percmission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- - para usar la camara desde la App -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- escribir en memoria para guardar las fotos -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />

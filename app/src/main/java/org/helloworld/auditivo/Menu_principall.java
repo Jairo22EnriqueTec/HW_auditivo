@@ -87,7 +87,7 @@ fragmentseleccionado=true;
             fragmentseleccionado=true;
         } else if (id == R.id.nav_share) {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, Formulario_Datos_Usuario.class));
+            fragment=new Perfil();
             fragmentseleccionado=true;
         } else if (id == R.id.nav_send) {
             Toast.makeText(this, "Cerrar Secion", Toast.LENGTH_SHORT).show();

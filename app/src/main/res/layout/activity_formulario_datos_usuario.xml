@@ -14,20 +14,21 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center"
         app:cardElevation="25dp"
-        app:cardCornerRadius="110dp"
+        app:cardCornerRadius="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         >
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_margin="8dp"
             android:src="@drawable/icono_hw_google_play_transparente" />
 
     </android.support.v7.widget.CardView>
         <TextView
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HW"
@@ -46,7 +47,7 @@
         android:layout_gravity="left"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         />
     <ImageView
@@ -56,159 +57,173 @@
         android:src="@drawable/conector_lineal_azul"
         android:rotation="180"
         />
-<android.support.v7.widget.CardView
-    android:layout_width="wrap_content"
-    app:cardCornerRadius="20dp"
-    android:layout_gravity="center"
-    app:cardBackgroundColor="@color/HW_azul"
-    android:layout_height="wrap_content">
-        <EditText
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:ems="13"
-            android:drawablePadding="10dp"
-            android:inputType="textPersonName"
-            android:drawableLeft="@drawable/user"
-            android:textColorHint="@color/white"
-            android:background="@color/HW_azul"
-            android:layout_margin="8dp"
-            android:id="@+id/NombreUsuario"
-            />
-</android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/HW_azul"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        >
-        <EditText
+            android:layout_gravity="left"
+            app:cardBackgroundColor="@color/HW_azul"
+            app:cardCornerRadius="20dp">
+
+            <EditText
+                android:id="@+id/NombreUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/HW_azul"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="10dp"
+                android:ems="13"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/white" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Apellidos"
-            android:ems="13"
-            android:drawablePadding="10dp"
-            android:inputType="textPersonName"
-            android:drawableLeft="@drawable/user"
-            android:textColorHint="@color/white"
-            android:background="@color/HW_azul"
-            android:layout_margin="8dp"
-            android:id="@+id/apellido"
-            />
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/HW_azul"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        >
-        <EditText
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/HW_azul"
+            app:cardCornerRadius="20dp">
+
+            <EditText
+                android:id="@+id/apellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/HW_azul"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="10dp"
+                android:ems="13"
+                android:hint="Apellidos"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/white"
+
+                />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Correo"
-            android:ems="13"
-            android:drawablePadding="10dp"
-            android:inputType="textPersonName"
-            android:drawableLeft="@drawable/email_usu"
-            android:textColorHint="@color/white"
-            android:background="@color/HW_azul"
-            android:layout_margin="8dp"
-            android:id="@+id/correo"
-            />
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/HW_azul"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        >
-        <EditText
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/HW_azul"
+            app:cardCornerRadius="20dp">
+
+            <EditText
+                android:id="@+id/correo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/HW_azul"
+                android:drawableLeft="@drawable/email_usu"
+                android:drawablePadding="10dp"
+                android:ems="13"
+                android:hint="Correo"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/white" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:ems="13"
-            android:drawablePadding="10dp"
-            android:inputType="textPersonName"
-            android:drawableLeft="@drawable/keyy"
-            android:textColorHint="@color/white"
-            android:background="@color/HW_azul"
-            android:layout_margin="8dp"
-            android:id="@+id/contrasena"
-            />
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/HW_naranja"
-        android:layout_marginTop="15dp"
-        android:layout_height="wrap_content">
-    <EditText
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/HW_azul"
+            app:cardCornerRadius="20dp">
 
-        android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="  Teléfono de emergencia"
-        android:drawablePadding="10dp"
-        android:drawableLeft="@drawable/ic_action_telefono_emergencia"
-        android:textColorHint="@color/white"
-        android:layout_gravity="center"
-        android:inputType="phone"
-        android:background="@color/HW_naranja"
-        android:layout_margin="8dp"
-        android:id="@+id/TelefonoUsuario"
-        />
-    </android.support.v7.widget.CardView>
+            <EditText
+                android:id="@+id/contrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/HW_azul"
+                android:drawableLeft="@drawable/keyy"
+                android:drawablePadding="10dp"
+                android:ems="13"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textColorHint="@color/white" />
+        </android.support.v7.widget.CardView>
 
-
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/HW_rojo"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginRight="5dp"
-        android:layout_height="wrap_content">
-        <at.markushi.ui.CircleButton
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_action_calendario"
-            android:layout_gravity="center"
-            app:cb_color="@color/HW_rojo"
-            android:id="@+id/BtnCalendar"/>
-
-        <EditText
-            android:layout_marginLeft="5dp"
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Fecha de nacimiento"
-            android:editable="false"
-            android:textColorHint="@color/white"
-            android:layout_gravity="center"
-            android:id="@+id/EditCalendario"
-            android:drawablePadding="10dp"
-            android:background="@color/HW_rojo" />
-    </LinearLayout>
-    </android.support.v7.widget.CardView>
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/HW_naranja"
+            app:cardCornerRadius="20dp">
+
+            <EditText
+
+                android:id="@+id/TelefonoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/HW_naranja"
+                android:drawableLeft="@drawable/ic_action_telefono_emergencia"
+                android:drawablePadding="10dp"
+                android:hint="  Teléfono de emergencia"
+                android:inputType="phone"
+                android:textColorHint="@color/white" />
+        </android.support.v7.widget.CardView>
 
 
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/HW_rojo"
+            app:cardCornerRadius="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/EditCalendario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/HW_rojo"
+                    android:drawablePadding="10dp"
+                    android:editable="false"
+                    android:hint="Fecha de nacimiento"
+                    android:textColorHint="@color/white" />
+
+                <at.markushi.ui.CircleButton
+                    android:id="@+id/BtnCalendar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_action_calendario"
+                    app:cb_color="@color/HW_rojo" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+</LinearLayout>
+    </ScrollView>
     <ImageView
         android:layout_width="fill_parent"
         android:layout_height="30dp"
         android:layout_gravity="left"
         android:src="@drawable/conector_lineal_azul"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         />
 
     <Button
@@ -217,7 +232,7 @@
         android:background="@drawable/boton_aceotar"
         android:textColor="#fff"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="3dp"
         android:text="Aceptar"
         android:textAllCaps="false"
         android:padding="10dp"

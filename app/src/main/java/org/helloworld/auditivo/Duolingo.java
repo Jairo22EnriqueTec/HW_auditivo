@@ -159,7 +159,6 @@ void NuevaActivity(){
         txtTema.setText("Tema: "+VariablesYDatos.DuolingoNombres[bloquecito]);
 
         IMGgif.setImageResource((int)(VariablesYDatos.OpcionesDuolingo[bloquecito][fila][6]));
-        //opcion1,opcion2,opcion3,opcion4,pregunta,buena,gif
-        //fila++;
+
     }
 }
