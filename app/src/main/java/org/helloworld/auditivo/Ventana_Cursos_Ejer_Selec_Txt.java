@@ -3,14 +3,13 @@ package org.helloworld.auditivo;
 import android.app.Dialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+import androidx.cardview.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.helloworld.auditivo.R;
 import org.helloworld.auditivo.Clases.VariablesYDatos;
 
 import pl.droidsonroids.gif.GifImageView;

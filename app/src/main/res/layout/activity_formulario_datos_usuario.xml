@@ -10,23 +10,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        app:cardElevation="25dp"
-        app:cardCornerRadius="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        >
-
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_margin="8dp"
-            android:src="@drawable/icono_hw_google_play_transparente" />
+            android:src="@drawable/icono_hw_google_play_transparente" >
 
-    </android.support.v7.widget.CardView>
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+
         <TextView
             android:layout_marginLeft="25dp"
             android:layout_width="wrap_content"
@@ -66,7 +59,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     >
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -85,9 +78,9 @@
                 android:hint="Nombre"
                 android:inputType="textPersonName"
                 android:textColorHint="@color/white" />
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -109,9 +102,9 @@
                 android:textColorHint="@color/white"
 
                 />
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -131,9 +124,9 @@
                 android:hint="Correo"
                 android:inputType="textPersonName"
                 android:textColorHint="@color/white" />
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -153,9 +146,9 @@
                 android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:textColorHint="@color/white" />
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -177,10 +170,10 @@
                 android:hint="  Teléfono de emergencia"
                 android:inputType="phone"
                 android:textColorHint="@color/white" />
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -215,7 +208,7 @@
                     android:src="@drawable/ic_action_calendario"
                     app:cb_color="@color/HW_rojo" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 </LinearLayout>
     </ScrollView>
     <ImageView

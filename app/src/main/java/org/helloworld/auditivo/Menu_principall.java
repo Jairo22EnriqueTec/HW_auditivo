@@ -3,26 +3,39 @@ package org.helloworld.auditivo;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import com.google.android.material.navigation.NavigationView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import de.hdodenhof.circleimageview.CircleImageView;
+
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Menu_principall extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, Audio_Texto.OnFragmentInteractionListener {
-
+CircleImageView imagenusus;
+TextView tiempo_diaa, nombre;
+LayoutInflater inflater;
+ViewGroup container;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //View view=inflater.inflate(R.layout.nav_header_menu_principal, container, false);
+nombre=findViewById(R.id.nombre_corto);
+
+
 //Si se sube
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -37,10 +50,13 @@ public class Menu_principall extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+
         } else {
             super.onBackPressed();
+
         }
     }
 
@@ -77,8 +93,7 @@ public class Menu_principall extends AppCompatActivity
             fragment=new BlankFragment();
             fragmentseleccionado=true;
         } else if (id == R.id.nav_gallery) {
-fragment=new Pictogramas();
-fragmentseleccionado=true;
+
         } else if (id == R.id.nav_slideshow) {
             fragment=new Audio_Texto();
             fragmentseleccionado=true;
@@ -86,9 +101,8 @@ fragmentseleccionado=true;
             fragment=new Cursos_F();
             fragmentseleccionado=true;
         } else if (id == R.id.nav_share) {
-            Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
-            fragment=new Perfil();
-            fragmentseleccionado=true;
+            Intent intent=new Intent(Menu_principall.this, Perfil_Usuario.class);
+            startActivity(intent);
         } else if (id == R.id.nav_send) {
             Toast.makeText(this, "Cerrar Secion", Toast.LENGTH_SHORT).show();
         }

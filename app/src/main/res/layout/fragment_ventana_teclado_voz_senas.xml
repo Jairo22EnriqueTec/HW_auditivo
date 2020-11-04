@@ -31,14 +31,14 @@
                     android:layout_marginBottom="1dp"
                     android:layout_marginTop="6dp">
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycleropcionesss"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
                         android:layout_marginRight="10dp">
 
-                    </android.support.v7.widget.RecyclerView>
+                    </androidx.recyclerview.widget.RecyclerView>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -53,14 +53,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1.1">
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:id="@+id/recyclerViewtitulos"
 
                         >
 
-                    </android.support.v7.widget.RecyclerView>
+                    </androidx.recyclerview.widget.RecyclerView>
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>

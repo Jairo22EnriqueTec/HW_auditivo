@@ -1,7 +1,5 @@
 package org.helloworld.auditivo;
 
-import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,12 +8,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import org.helloworld.auditivo.R;
 import org.helloworld.auditivo.Introduccion.Bienvenida;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -51,15 +47,14 @@ public class Carga_Inicio extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //String dele="DELETE FROM Usuario";
-                Datos_Usuario conex = new Datos_Usuario(getApplicationContext(), "DBPerfil", null, 1);
+                String dele="DELETE FROM Perfill";
+                Datos_Usuario conex = new Datos_Usuario(getApplicationContext(), "DBPerfill", null, 1);
                 SQLiteDatabase db = conex.getReadableDatabase();
 
-                 //db.execSQL(dele);
-                final Cursor cursor = db.rawQuery("SELECT Correo FROM Perfil", null);
+                 db.execSQL(dele);
+                final Cursor cursor = db.rawQuery("SELECT Correo FROM Perfill", null);
                 boolean sino=true;
                 while (cursor.moveToNext()) {
-
                     if (cursor.getString(0)!=null){
                         Intent inte = new Intent(Carga_Inicio.this, Menu_principall.class);
                         EntrarDirecto=true;

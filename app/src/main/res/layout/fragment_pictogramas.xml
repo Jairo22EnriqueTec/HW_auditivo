@@ -27,10 +27,10 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="6dp"
                     android:layout_marginBottom="1dp">
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycleropciones"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
                     <FrameLayout
                         android:layout_below="@+id/recycleropciones"
                         android:id="@+id/fragmm"
@@ -51,7 +51,7 @@
                 android:weightSum="1"
                 android:layout_height="wrap_content"
                 >
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_weight="1.1"
                     android:layout_centerHorizontal="true"
@@ -75,8 +75,8 @@
                         android:textColorHint="@color/blanco"
                         ></TextView>
 
-                </android.support.v7.widget.CardView>
-                <android.support.design.widget.FloatingActionButton
+                </androidx.cardview.widget.CardView>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     app:backgroundTint="@color/colorPrimary"
                     android:layout_marginLeft="5dp"
                     android:layout_width="match_parent"
@@ -87,8 +87,8 @@
                     app:fab_size="normal"
                     android:layout_marginRight="5dp"
                     android:id="@+id/hablar"
-                    ></android.support.design.widget.FloatingActionButton>
-                <android.support.design.widget.FloatingActionButton
+                    ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/delete"
@@ -96,7 +96,7 @@
                     android:id="@+id/borrar"
                     >
 
-                </android.support.design.widget.FloatingActionButton>
+                </com.google.android.material.floatingactionbutton.FloatingActionButton>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

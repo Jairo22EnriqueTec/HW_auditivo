@@ -6,13 +6,58 @@
     android:background="@drawable/portada"
     android:gravity="start"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="horizontal"
+    >
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:gravity="center"
+        android:weightSum="1"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+        android:src="@drawable/users"
+            android:id="@+id/imagen_menu_usu"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buenos Dias"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_gravity="left"
+            android:id="@+id/tiempo_dia"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sofia"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_gravity="left"
+            android:id="@+id/nombre_corto"
+            >
+
+        </TextView>
+    </LinearLayout>
+</LinearLayout>
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -23,16 +68,13 @@
             android:id="@+id/lin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imagen_menu_usu"
+    android:src="@drawable/users"
+    ></de.hdodenhof.circleimageview.CircleImageView>
 
-            <ImageView
-                android:layout_marginTop="20dp"
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="@dimen/nav_header_vertical_spacing"
-                app:srcCompat="@drawable/users"
-
-                />
         </LinearLayout>
 
         <LinearLayout
@@ -58,5 +100,5 @@
                 android:textStyle="bold"
                 ></TextView>
         </LinearLayout>
-    </LinearLayout>
+    </LinearLayout>-->
 </LinearLayout>

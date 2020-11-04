@@ -5,9 +5,8 @@ import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -88,19 +87,15 @@ public class Formulario_Datos_Usuario extends AppCompatActivity {
 
                     // String dele="DELETE FROM Usuario";
 
-                    SQLiteDatabase db = new Datos_Usuario(this, "DBPerfil", null, 1).getWritableDatabase();
+                    SQLiteDatabase db = new Datos_Usuario(this, "DBPerfill", null, 1).getWritableDatabase();
                     //db.execSQL(dele);
-                    db.execSQL("INSERT INTO Perfil (Nombre, Nacimiento, Numero, Frase, Correo, Password) VALUES ('" + l + "','" + ll + "','" + numero + "','" + frase + "','" + correo_r + "','" + contra_r + "')");
+                    db.execSQL("INSERT INTO Perfill (Nombre, Nacimiento, Numero, Frase, Correo, Password) VALUES ('" + l + "','" + ll + "','" + numero + "','" + frase + "','" + correo_r + "','" + contra_r + "')");
 
                     //Subir al servidor
 //cargarweb();
                     ClaseConection claseConection = new ClaseConection();
-                    String response = claseConection.execute("https://helloworldapp.000webhostapp.com/Registro.php?nombre=" + l + "&fecha_nacimiento=" + ll + "&telefono=" + numero + "&frase=" + frase + "&correo" + correo_r + "&passwordd" + contra_r + "").get();
-                    progressDialog = new ProgressDialog(this);
-                    progressDialog.setMessage("Cargando...");
-                    progressDialog.show();
+                    String response = claseConection.execute("https://helloworldapp.000webhostapp.com/bdApp/Registro.php?nombre=" + l + "&fecha_nacimiento=" + ll + "&telefono=" + numero + "&frase=" + frase + "&correo=" + correo_r + "&passwordd=" + contra_r + "").get();
                     if (response != null) {
-                        progressDialog.hide();
                         Toast.makeText(this, "Se ha registrado con Exito", Toast.LENGTH_SHORT).show();
 
 
